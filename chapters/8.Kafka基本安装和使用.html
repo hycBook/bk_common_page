@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Kafka基本安装和使用 · Python相关学习记录</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="GitBook 3.2.3" name="generator"/>
+<meta content="narutohyc" name="author"/>
+<link href="../gitbook/style.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-splitter/splitter.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-anchors/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-donate/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-code/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-search-plus/search.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-pageview-count/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-highlight/website.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-fontsettings/website.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-theme-comscore/test.css" rel="stylesheet"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<link href="../gitbook/images/apple-touch-icon-precomposed-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../gitbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="3.Linux常用命令.html" rel="next"/>
+<link href="../" rel="prev"/>
+<link href="./chapters/res/other/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="./chapters/res/other/favicon.ico" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+<script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"narutohyc","repo":"bk_python","type":"star","size":"small","count":true}]};
+    </script>
+</head>
+<body>
+          <div class="mountain_a"></div>
+          <div class="mountain_b"></div>
+          <div class="house right">
+            <div class="fence"></div>
+            <div class="wall"></div>
+            <div class="roof left"></div>
+            <div class="roof right"></div>
+            <div class="door"></div>
+          </div>
+          <div class="house left">
+            <div class="fence"></div>
+            <div class="wall"></div>
+            <div class="roof left"></div>
+            <div class="roof right"></div>
+            <div class="door"></div>
+          </div>
+          <div class="tree_back"></div>
+          <div class="tree"></div>
+          <div class="postbox_a">
+            <div class="hole"></div>
+          </div>
+          <div class="postbox_b">
+            <div class="hole"></div>
+          </div>
+          <div class="windmill">
+            <div class="tower"></div>
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="blade">
+              <div class="windblade"></div>
+              <div class="windblade windblade2"></div>
+              <div class="windblade windblade3"></div>
+              <div class="windblade windblade4"></div>
+            </div>
+          </div>
+          <div class="allsnows">
+            <div class="snow1"></div>
+            <div class="snow2"></div>
+            <div class="snow3"></div>
+            <div class="snow4"></div>
+            <div class="snow5"></div>
+            <div class="snow6"></div>
+            <div class="snow7"></div>
+            <div class="snow8"></div>
+            <div class="snow9"></div>
+            <div class="snow10"></div>
+            <div class="snow11"></div>
+            <div class="snow12"></div>
+            <div class="snow13"></div>
+            <div class="snow14"></div>
+            <div class="snow15"></div>
+            <div class="snow16"></div>
+            <div class="snow17"></div>
+            <div class="snow18"></div>
+            <div class="snow19"></div>
+            <div class="snow20"></div>
+          </div>
+          <div class="ground">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="ice">
+              <div class="glare"></div>
+              <div class="ice_shadow"></div>
+            </div>
+
+          </div>
+    
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input placeholder="输入并搜索" type="text"/>
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a class="custom-link" href="https://hycbook.github.io/bk_index/" target="_blank">书籍主页</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-level="1.1" data-path="../" id="chapter_id_0">
+<a href="../">
+<b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+</li>
+<li class="chapter active" data-level="1.2" data-path="8.Kafka基本安装和使用.html" id="chapter_id_1">
+<a href="8.Kafka基本安装和使用.html">
+<b>1.2.</b>
+                    
+                    Kafka基本安装和使用
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.3" data-path="3.Linux常用命令.html" id="chapter_id_2">
+<a href="3.Linux常用命令.html">
+<b>1.3.</b>
+                    
+                    Linux常用命令
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.4" data-path="1.alicloud_deployment.html" id="chapter_id_3">
+<a href="1.alicloud_deployment.html">
+<b>1.4.</b>
+                    
+                    alicloud_deployment
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.5" data-path="6.docker使用.html" id="chapter_id_4">
+<a href="6.docker使用.html">
+<b>1.5.</b>
+                    
+                    docker使用
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.6" data-path="9.elementary_os记录.html" id="chapter_id_5">
+<a href="9.elementary_os记录.html">
+<b>1.6.</b>
+                    
+                    elementary_os记录
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.7" data-path="5.gitbook博客搭建.html" id="chapter_id_6">
+<a href="5.gitbook博客搭建.html">
+<b>1.7.</b>
+                    
+                    gitbook博客搭建
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.8" data-path="4.github协作.html" id="chapter_id_7">
+<a href="4.github协作.html">
+<b>1.8.</b>
+                    
+                    github协作
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.9" data-path="7.md数学公式和emoji表情.html" id="chapter_id_8">
+<a href="7.md数学公式和emoji表情.html">
+<b>1.9.</b>
+                    
+                    md数学公式和emoji表情
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.10" data-path="2.reinstall_the_system.html" id="chapter_id_9">
+<a href="2.reinstall_the_system.html">
+<b>1.10.</b>
+                    
+                    reinstall_the_system
+            
+                </a>
+</li>
+<li class="divider"></li>
+<li>
+<a class="gitbook-link" href="https://www.gitbook.com" target="blank">
+            本书使用 GitBook 发布
+        </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="..">Kafka基本安装和使用</a>
+</h1>
+</div>
+<div class="page-wrapper" role="main" tabindex="-1">
+<div class="page-inner">
+<div class="search-plus" id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon"></span><a href="#kafka简介">1 Kafka简介</a></li><ul><li><span class="title-icon"></span><a href="#基本概念">1.1 基本概念</a></li></ul><li><span class="title-icon"></span><a href="#kafka安装和测试">2 Kafka安装和测试</a></li><ul><li><span class="title-icon"></span><a href="#下载">2.1 下载</a></li><li><span class="title-icon"></span><a href="#配置">2.2 配置</a></li><ul><li><span class="title-icon"></span><a href="#zookeeperproperties">2.2.1 zookeeper.properties</a></li><li><span class="title-icon"></span><a href="#serverproperties">2.2.2 server.properties</a></li></ul><li><span class="title-icon"></span><a href="#启动">2.3 启动</a></li><li><span class="title-icon"></span><a href="#测试">2.4 测试</a></li><li><span class="title-icon"></span><a href="#另一套方案">2.5 另一套方案</a></li><li><span class="title-icon"></span><a href="#其他问题">2.6 其他问题</a></li></ul></ul></div><a href="#kafka简介" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><hr/>
+<h1 id="kafka简介">1 Kafka简介</h1>
+<blockquote>
+<p><a href="http://kafka.apache.org/downloads" target="_blank">kafka官网下载</a></p>
+</blockquote>
+<h2 id="基本概念">1.1 基本概念</h2>
+<h1 id="kafka安装和测试">2 Kafka安装和测试</h1>
+<h2 id="下载">2.1 下载</h2>
+<blockquote>
+<p><a href="https://archive.apache.org/dist/kafka/2.8.0/kafka_2.12-2.8.0.tgz" target="_blank">kafka_2.12-2.8.0下载</a></p>
+</blockquote>
+<h2 id="配置">2.2 配置</h2>
+<h3 id="zookeeperproperties">2.2.1 zookeeper.properties</h3>
+<pre><code class="lang-properties"># the directory where the snapshot is stored.
+dataDir=/home/huangyc/kafka_2.12-2.8.0/zk_logs
+# the port at which the clients will connect
+clientPort=2183
+</code></pre>
+<h3 id="serverproperties">2.2.2 server.properties</h3>
+<pre><code class="lang-properties"># The address the socket server listens on. It will get the value returned from 
+# java.net.InetAddress.getCanonicalHostName() if not configured.
+#   FORMAT:
+#     listeners = listener_name://host_name:port
+#   EXAMPLE:
+#     listeners = PLAINTEXT://your.host.name:9092
+listeners=PLAINTEXT://:9092
+
+# Zookeeper connection string (see zookeeper docs for details).
+# This is a comma separated host:port pairs, each corresponding to a zk
+# server. e.g. "127.0.0.1:3000,127.0.0.1:3001,127.0.0.1:3002".
+# You can also append an optional chroot string to the urls to specify the
+# root directory for all kafka znodes.
+zookeeper.connect=localhost:2183
+
+# A comma separated list of directories under which to store log files
+log.dirs=/home/huangyc/kafka_2.12-2.8.0/kafka_logs
+</code></pre>
+<h2 id="启动">2.3 启动</h2>
+<blockquote>
+<p>启动zookeeper</p>
+</blockquote>
+<pre><code class="lang-shell">./bin/zookeeper-server-start.sh ./config/zookeeper.properties
+</code></pre>
+<blockquote>
+<p>启动kafka</p>
+</blockquote>
+<pre><code class="lang-shell">./bin/kafka-server-start.sh ./config/server.properties
+</code></pre>
+<blockquote>
+<p>查看Kafka进程</p>
+</blockquote>
+<pre><code class="lang-shell">[root@Hmaster kafka_2.12-2.8.0]# jps | grep Kafka
+23425 Kafka
+</code></pre>
+<h2 id="测试">2.4 测试</h2>
+<blockquote>
+<p>查看主题列表</p>
+</blockquote>
+<pre><code class="lang-shell">bin/kafka-topics.sh --zookeeper localhost:2183 --list
+</code></pre>
+<blockquote>
+<p>消息生产者</p>
+</blockquote>
+<pre><code class="lang-shell">bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+</code></pre>
+<blockquote>
+<p>消息消费者</p>
+</blockquote>
+<pre><code class="lang-shell">bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+0.9以前版本: 
+kafka-console-consumer.bat --zookeeper localhost:2183 --topic test --from-beginning
+</code></pre>
+<h2 id="另一套方案">2.5 另一套方案</h2>
+<blockquote>
+<p>server.properties</p>
+</blockquote>
+<pre><code class="lang-properties"># The address the socket server listens on. It will get the value returned from 
+# java.net.InetAddress.getCanonicalHostName() if not configured.
+#   FORMAT:
+#     listeners = listener_name://host_name:port
+#   EXAMPLE:
+#     listeners = PLAINTEXT://your.host.name:9092
+listeners=PLAINTEXT://:9092
+
+# Hostname and port the broker will advertise to producers and consumers. If not set, 
+# it uses the value for "listeners" if configured.  Otherwise, it will use the value
+# returned from java.net.InetAddress.getCanonicalHostName().
+advertised.listeners=PLAINTEXT://192.168.123.21:9092
+
+# A comma separated list of directories under which to store log files
+log.dirs=/home/huangyc/kafka_2.12-2.8.0/kafka_logs
+
+# Zookeeper connection string (see zookeeper docs for details).
+# This is a comma separated host:port pairs, each corresponding to a zk
+# server. e.g. "127.0.0.1:3000,127.0.0.1:3001,127.0.0.1:3002".
+# You can also append an optional chroot string to the urls to specify the
+# root directory for all kafka znodes.
+zookeeper.connect=localhost:2183
+</code></pre>
+<blockquote>
+<p>消息生产者</p>
+</blockquote>
+<pre><code class="lang-shell">bin/kafka-console-producer.sh --broker-list localhost:9092 --topiest
+</code></pre>
+<blockquote>
+<p>消息消费者</p>
+</blockquote>
+<pre><code class="lang-shell">bin/kafka-console-consumer.sh --bootstrap-server 192.168.123.21:9092
+</code></pre>
+<h2 id="其他问题">2.6 其他问题</h2>
+<blockquote>
+<p>win10访问</p>
+<p>需要配置host</p>
+<p>C:\Windows\System32\drivers\etc\hosts</p>
+<p>192.168.123.21 Hmaster</p>
+<pre><code class="lang-shell"># 查看 hostname
+[root@Hmaster ~]# hostnamectl
+   Static hostname: Hmaster
+         Icon name: computer-desktop
+           Chassis: desktop
+        Machine ID: 87af5eaaaf7c48f6b1cd9f42bfb51c76
+           Boot ID: 9fe58388f3274f0e838b7cd1b720eacd
+  Operating System: CentOS Linux 7 (Core)
+       CPE OS Name: cpe:/o:centos:centos:7
+            Kernel: Linux 3.10.0-1160.el7.x86_64
+      Architecture: x86-64
+</code></pre>
+<p>防火墙开启</p>
+<p>systemctl start firewalld</p>
+<p>端口开启</p>
+<p>firewall-cmd --zone=public --add-port=9092/tcp --permanent</p>
+<p>生效</p>
+<p>firewall-cmd --reload</p>
+</blockquote>
+<p></p><footer class="page-footer"><span class="copyright">Copyright © narutohyc.com 2021 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
+2023-08-14 07:23:22
+</span></footer><hr/><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'evyLlP61gQN3G3OM2GQq1rzH-gzGzoHsz',appKey: 'utUrzoiqNaDEGlgr09JL1pXB',placeholder: '欢迎留下评论交流~',avatar: 'wavatar',meta: undefined,pageSize: 15,lang: 'zh-CN',recordIP: false})</script><p></p>
+</section>
+</div>
+<div class="search-results">
+<div class="has-results">
+<h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Previous page: Introduction" class="navigation navigation-prev" href="../">
+<i class="fa fa-angle-left"></i>
+</a>
+<a aria-label="Next page: Linux常用命令" class="navigation navigation-next" href="3.Linux常用命令.html">
+<i class="fa fa-angle-right"></i>
+</a>
+<script src="https://cdn.jsdelivr.net/gh/zztongtong/CDN/js/live2d.min.js"></script><div style="position:absolute; bottom:0; left:0; width:200;"><canvas height="350" id="model_1" width="200"></canvas></div></div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Kafka基本安装和使用","date":"2022/9/10 20:46:25","top_img":"https://pic.hycbook.com/i/hexo/post_imgs/蕾姆7.webp","cover":"https://pic.hycbook.com/i/hexo/post_cover/蕾姆7.webp","categories":["common"],"tags":["kafka"],"abbrlink":26285,"level":"1.2","depth":1,"next":{"title":"Linux常用命令","level":"1.3","depth":1,"path":"chapters/3.Linux常用命令.md","ref":"chapters/3.Linux常用命令.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","mathjax","mermaid-gb3","tbfed-pagefooter","code","search-plus","-lunr","-search","lightbox","theme-comscore","valine","pageview-count","favicon-absolute","copyright-v"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © narutohyc.com 2021","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/narutohyc"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://s2.loli.net/2022/03/23/dEYjkaSGXwe7rnu.png","alipayText":"alipay打赏","button":"欢迎打赏","title":"","wechat":"https://s2.loli.net/2022/03/23/WDiTVSamQBJdEA4.png","wechatText":"wechat打赏"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"./chapters/res/other/favicon.ico","appleTouchIconPrecomposedMore":{},"favicon":"./chapters/res/other/favicon.ico"},"copyright-v":{"copyProtect":true,"enableFooter":false,"site":"https://hycbook.github.io/bk_python/","author":"narutohyc","website":"python元知识驿站","image":"https://s2.loli.net/2022/03/24/pbMd1BCgUNzi7mG.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"narutohyc","repo":"bk_python","type":"star","size":"small","count":true}]},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"valine":{"avatar":"wavatar","lang":"zh-CN","pageSize":15,"placeholder":"欢迎留下评论交流~","recordIP":false,"appId":"evyLlP61gQN3G3OM2GQq1rzH-gzGzoHsz","appKey":"utUrzoiqNaDEGlgr09JL1pXB"},"search-plus":{}},"theme":"default","author":"narutohyc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python相关学习记录","language":"zh-hans","links":{"sidebar":{"书籍主页":"https://hycbook.github.io/bk_index/"}},"gitbook":"*","description":"记录 Python 的学习和一些技巧的使用"},"file":{"path":"chapters/8.Kafka基本安装和使用.md","mtime":"2023-08-14T07:23:22.581Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-14T07:24:23.700Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+<canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script></div>
+<script src="../gitbook/gitbook.js"></script>
+<script src="../gitbook/theme.js"></script>
+<script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+<script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+<script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+<script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+<script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+<script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+<script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-copyright-v/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+</body>
+</html>

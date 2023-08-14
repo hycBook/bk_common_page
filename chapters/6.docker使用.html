@@ -1,0 +1,1692 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>docker使用 · Python相关学习记录</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="GitBook 3.2.3" name="generator"/>
+<meta content="narutohyc" name="author"/>
+<link href="../gitbook/style.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-splitter/splitter.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-anchors/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-donate/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-code/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-search-plus/search.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-pageview-count/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-highlight/website.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-fontsettings/website.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-theme-comscore/test.css" rel="stylesheet"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<link href="../gitbook/images/apple-touch-icon-precomposed-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../gitbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="9.elementary_os记录.html" rel="next"/>
+<link href="1.alicloud_deployment.html" rel="prev"/>
+<link href="./chapters/res/other/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="./chapters/res/other/favicon.ico" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+<script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"narutohyc","repo":"bk_python","type":"star","size":"small","count":true}]};
+    </script>
+</head>
+<body>
+          <div class="mountain_a"></div>
+          <div class="mountain_b"></div>
+          <div class="house right">
+            <div class="fence"></div>
+            <div class="wall"></div>
+            <div class="roof left"></div>
+            <div class="roof right"></div>
+            <div class="door"></div>
+          </div>
+          <div class="house left">
+            <div class="fence"></div>
+            <div class="wall"></div>
+            <div class="roof left"></div>
+            <div class="roof right"></div>
+            <div class="door"></div>
+          </div>
+          <div class="tree_back"></div>
+          <div class="tree"></div>
+          <div class="postbox_a">
+            <div class="hole"></div>
+          </div>
+          <div class="postbox_b">
+            <div class="hole"></div>
+          </div>
+          <div class="windmill">
+            <div class="tower"></div>
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="blade">
+              <div class="windblade"></div>
+              <div class="windblade windblade2"></div>
+              <div class="windblade windblade3"></div>
+              <div class="windblade windblade4"></div>
+            </div>
+          </div>
+          <div class="allsnows">
+            <div class="snow1"></div>
+            <div class="snow2"></div>
+            <div class="snow3"></div>
+            <div class="snow4"></div>
+            <div class="snow5"></div>
+            <div class="snow6"></div>
+            <div class="snow7"></div>
+            <div class="snow8"></div>
+            <div class="snow9"></div>
+            <div class="snow10"></div>
+            <div class="snow11"></div>
+            <div class="snow12"></div>
+            <div class="snow13"></div>
+            <div class="snow14"></div>
+            <div class="snow15"></div>
+            <div class="snow16"></div>
+            <div class="snow17"></div>
+            <div class="snow18"></div>
+            <div class="snow19"></div>
+            <div class="snow20"></div>
+          </div>
+          <div class="ground">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="ice">
+              <div class="glare"></div>
+              <div class="ice_shadow"></div>
+            </div>
+
+          </div>
+    
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input placeholder="输入并搜索" type="text"/>
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a class="custom-link" href="https://hycbook.github.io/bk_index/" target="_blank">书籍主页</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-level="1.1" data-path="../" id="chapter_id_0">
+<a href="../">
+<b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.2" data-path="8.Kafka基本安装和使用.html" id="chapter_id_1">
+<a href="8.Kafka基本安装和使用.html">
+<b>1.2.</b>
+                    
+                    Kafka基本安装和使用
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.3" data-path="3.Linux常用命令.html" id="chapter_id_2">
+<a href="3.Linux常用命令.html">
+<b>1.3.</b>
+                    
+                    Linux常用命令
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.4" data-path="1.alicloud_deployment.html" id="chapter_id_3">
+<a href="1.alicloud_deployment.html">
+<b>1.4.</b>
+                    
+                    alicloud_deployment
+            
+                </a>
+</li>
+<li class="chapter active" data-level="1.5" data-path="6.docker使用.html" id="chapter_id_4">
+<a href="6.docker使用.html">
+<b>1.5.</b>
+                    
+                    docker使用
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.6" data-path="9.elementary_os记录.html" id="chapter_id_5">
+<a href="9.elementary_os记录.html">
+<b>1.6.</b>
+                    
+                    elementary_os记录
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.7" data-path="5.gitbook博客搭建.html" id="chapter_id_6">
+<a href="5.gitbook博客搭建.html">
+<b>1.7.</b>
+                    
+                    gitbook博客搭建
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.8" data-path="4.github协作.html" id="chapter_id_7">
+<a href="4.github协作.html">
+<b>1.8.</b>
+                    
+                    github协作
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.9" data-path="7.md数学公式和emoji表情.html" id="chapter_id_8">
+<a href="7.md数学公式和emoji表情.html">
+<b>1.9.</b>
+                    
+                    md数学公式和emoji表情
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.10" data-path="2.reinstall_the_system.html" id="chapter_id_9">
+<a href="2.reinstall_the_system.html">
+<b>1.10.</b>
+                    
+                    reinstall_the_system
+            
+                </a>
+</li>
+<li class="divider"></li>
+<li>
+<a class="gitbook-link" href="https://www.gitbook.com" target="blank">
+            本书使用 GitBook 发布
+        </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="..">docker使用</a>
+</h1>
+</div>
+<div class="page-wrapper" role="main" tabindex="-1">
+<div class="page-inner">
+<div class="search-plus" id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon"></span><a href="#docker">1 docker</a></li><ul><li><span class="title-icon"></span><a href="#docker是什么">1.1 docker是什么</a></li><li><span class="title-icon"></span><a href="#docker安装">1.2 docker安装</a></li><li><span class="title-icon"></span><a href="#基本命令学习">1.3 基本命令学习</a></li><li><span class="title-icon"></span><a href="#目录挂载">1.4 目录挂载</a></li><li><span class="title-icon"></span><a href="#多容器通信">1.5 多容器通信</a></li><ul><li><span class="title-icon"></span><a href="#虚拟网络">1.5.1 虚拟网络</a></li><li><span class="title-icon"></span><a href="#docker-compose">1.5.2 Docker-Compose</a></li></ul><li><span class="title-icon"></span><a href="#hello-world">1.6 hello world</a></li><li><span class="title-icon"></span><a href="#dockfile">1.7 dockfile</a></li><li><span class="title-icon"></span><a href="#发布和部署">1.8 发布和部署</a></li><li><span class="title-icon"></span><a href="#示例">1.9 示例</a></li></ul><li><span class="title-icon"></span><a href="#实战neo4j">2 实战neo4j</a></li><ul><li><span class="title-icon"></span><a href="#安装neo4j">2.1 安装neo4j</a></li><li><span class="title-icon"></span><a href="#图算法插件">2.2 图算法插件</a></li><li><span class="title-icon"></span><a href="#启动neo4j">2.3 启动neo4j</a></li><li><span class="title-icon"></span><a href="#py库">2.4 py库</a></li></ul><li><span class="title-icon"></span><a href="#实战nebula">3 实战nebula</a></li><ul><li><span class="title-icon"></span><a href="#基本介绍">3.1 基本介绍</a></li><li><span class="title-icon"></span><a href="#环境搭建">3.2 环境搭建</a></li><li><span class="title-icon"></span><a href="#命令学习">3.3 命令学习</a></li><li><span class="title-icon"></span><a href="#客户端">3.4 客户端</a></li><li><span class="title-icon"></span><a href="#图模式">3.5 图模式</a></li><li><span class="title-icon"></span><a href="#可视化">3.6 可视化</a></li><li><span class="title-icon"></span><a href="#集群监控">3.7 集群监控</a></li><li><span class="title-icon"></span><a href="#数据导入">3.8 数据导入</a></li></ul><li><span class="title-icon"></span><a href="#k8s">4 k8s</a></li><ul><li><span class="title-icon"></span><a href="#简介">4.1 简介</a></li><li><span class="title-icon"></span><a href="#安装和部署">4.2 安装和部署</a></li></ul></ul></div><a href="#docker" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><hr/>
+<h1 id="docker">1 docker</h1>
+<blockquote>
+<p><a href="https://docs.docker.com/" target="_blank">docker官方文档</a></p>
+<p><a href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP" target="_blank">Docker 快速入门</a></p>
+</blockquote>
+<h2 id="docker是什么">1.1 docker是什么</h2>
+<p>Docker 是一个应用打包、分发、部署的工具</p>
+<p>你也可以把它理解为一个轻量的虚拟机，它只虚拟你软件需要的运行环境，多余的一点都不要</p>
+<p>而普通虚拟机则是一个完整而庞大的系统，包含各种不管你要不要的软件</p>
+<blockquote>
+<p>跟普通虚拟机的对比</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>普通虚拟机</th>
+<th>Docker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>跨平台</td>
+<td>通常只能在桌面级系统运行，例如 Windows/Mac，无法在不带图形界面的服务器上运行</td>
+<td>支持的系统非常多，各类 windows 和 Linux 都支持</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>性能损耗大，内存占用高，因为是把整个完整系统都虚拟出来了</td>
+<td>性能好，只虚拟软件所需运行环境，最大化减少没用的配置</td>
+</tr>
+<tr>
+<td>自动化</td>
+<td>需要手动安装所有东西</td>
+<td>一个命令就可以自动部署好所需环境</td>
+</tr>
+<tr>
+<td>稳定性</td>
+<td>稳定性不高，不同系统差异大</td>
+<td>稳定性好，不同系统都一样部署方式</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>打包、分发、部署</p>
+</blockquote>
+<p><strong>打包</strong>：就是把你软件运行所需的依赖、第三方库、软件打包到一起，变成一个安装包</p>
+<p><strong>分发</strong>：你可以把你打包好的“安装包”上传到一个镜像仓库，其他人可以非常方便的获取和安装</p>
+<p><strong>部署</strong>：拿着“安装包”就可以一个命令运行起来你的应用，自动模拟出一摸一样的运行环境，不管是在 Windows/Mac/Linux</p>
+<h2 id="docker安装">1.2 docker安装</h2>
+<p><script type="math/tex; mode=display">
+docker容器 = 镜像 + 可读层
+</script></p>
+<p>容器是由镜像实例化而来，简单来说，镜像是文件，容器是进程</p>
+<p><strong>容器是基于镜像创建的，即容器中的进程依赖于镜像中的文件</strong></p>
+<p>docker 的镜像概念类似虚拟机的镜像。是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器</p>
+<p>镜像运行起来就是容器，容器服务运行的过程中，基于原始镜像做了改变，比如安装了程序，添加了文件，也可以提交回去 (commit)成为镜像</p>
+<p>docker安装分为安装包和命令行两种</p>
+<p>下载<a href="https://www.docker.com/products/docker-desktop/" target="_blank">docker</a>安装包，按照指示安装即可</p>
+<p>windows需要打开<code>启用或关闭Windows功能</code>下的<code>Hyper-V</code>、<code>容器</code>和<code>适用于Linux的Windows子系统</code>选项</p>
+<p>安装完要打开<code>Docker Desktop</code>软件，打开会启动引擎，这样才能使用docker</p>
+<p>重要：打开<code>Docker Desktop</code>软件，打开<code>Settings</code>下的<code>Resources</code>，选择<code>Advanced</code>下的<code>Disk image location</code>，选择合适的文件夹存放docker的镜像和容器，注意后期容器多的话，这个文件夹很占空间的</p>
+<pre><code class="lang-sh">curl -fsSL https://get.docker.com | bash <span class="hljs-_">-s</span> docker --mirror Aliyun
+</code></pre>
+<blockquote>
+<p>配置镜像加速</p>
+</blockquote>
+<p>进入<a href="https://cr.console.aliyun.com/" target="_blank">阿里云</a>，登陆后点击左侧的镜像加速，生成自己的镜像加速地址</p>
+<p>执行阿里云推荐的终端命令，即可更新docker的镜像源为阿里云镜像</p>
+<pre><code class="lang-sh">sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">'EOF'</span>
+{
+  <span class="hljs-string">"registry-mirrors"</span>: [<span class="hljs-string">"https://xk5lrhin.mirror.aliyuncs.com"</span>]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+</code></pre>
+<blockquote>
+<p>代理配置</p>
+</blockquote>
+<ol>
+<li><p>为docker服务创建一个内嵌的systemd目录</p>
+<pre><code class="lang-sh">mkdir -p /etc/systemd/system/docker.service.d
+</code></pre>
+</li>
+<li><p>创建<code>/etc/systemd/system/docker.service.d/http-proxy.conf</code>文件，并添加HTTP_PROXY环境变量，其中[proxy-addr]和[proxy-port]分别改成实际情况的代理地址和端口</p>
+<pre><code class="lang-sh">[Service]
+Environment=<span class="hljs-string">"HTTP_PROXY=http://192.168.4.xx:xx"</span> <span class="hljs-string">"HTTPS_PROXY=http://192.168.4.xx:xx"</span>
+</code></pre>
+</li>
+<li><p>如果还有内部的不需要使用代理来访问的Docker registries，那么还需要制定NO_PROXY环境变量</p>
+<pre><code class="lang-sh">[Service]
+Environment=<span class="hljs-string">"HTTP_PROXY=http://192.168.4.xx:xx"</span> <span class="hljs-string">"HTTPS_PROXY=http://192.168.4.xx:xx"</span> <span class="hljs-string">"NO_PROXY=localhost,127.0.0.1,docker-registry.somecorporation.com"</span>
+</code></pre>
+</li>
+<li><p>更新配置并重启Docker服务</p>
+<pre><code class="lang-sh">systemctl daemon-reload
+systemctl restart docker
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>加速格式："registry-mirrors": ["<a href="https://registry.docker-cn.com" target="_blank">https://registry.docker-cn.com</a>"]</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>镜像加速器</th>
+<th>镜像加速器地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker 中国官方镜像</td>
+<td><a href="https://registry.docker-cn.com" target="_blank">https://registry.docker-cn.com</a></td>
+</tr>
+<tr>
+<td>DaoCloud 镜像站</td>
+<td><a href="http://f1361db2.m.daocloud.io" target="_blank">http://f1361db2.m.daocloud.io</a></td>
+</tr>
+<tr>
+<td>Azure 中国镜像</td>
+<td><a href="https://dockerhub.azk8s.cn" target="_blank">https://dockerhub.azk8s.cn</a></td>
+</tr>
+<tr>
+<td>科大镜像站</td>
+<td><a href="https://docker.mirrors.ustc.edu.cn" target="_blank">https://docker.mirrors.ustc.edu.cn</a></td>
+</tr>
+<tr>
+<td>阿里云</td>
+<td><a href="https://ud6340vz.mirror.aliyuncs.com" target="_blank">https://ud6340vz.mirror.aliyuncs.com</a></td>
+</tr>
+<tr>
+<td>七牛云</td>
+<td><a href="https://reg-mirror.qiniu.com" target="_blank">https://reg-mirror.qiniu.com</a></td>
+</tr>
+<tr>
+<td>网易云</td>
+<td><a href="https://hub-mirror.c.163.com" target="_blank">https://hub-mirror.c.163.com</a></td>
+</tr>
+<tr>
+<td>腾讯云</td>
+<td><a href="https://mirror.ccs.tencentyun.com" target="_blank">https://mirror.ccs.tencentyun.com</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="基本命令学习">1.3 基本命令学习</h2>
+<blockquote>
+<p>基本命令</p>
+</blockquote>
+<pre><code class="lang-sh"><span class="hljs-comment"># 查看版本号</span>
+docker version
+
+<span class="hljs-comment"># 启动docker</span>
+systemctl start docker
+<span class="hljs-comment"># 关闭docker</span>
+systemctl stop docker
+<span class="hljs-comment"># 重启docker</span>
+systemctl restart docker
+
+<span class="hljs-comment"># docker设置随服务启动而自启动</span>
+systemctl <span class="hljs-built_in">enable</span> docker
+
+<span class="hljs-comment"># 查看docker 运行状态</span>
+systemctl status docker
+
+<span class="hljs-comment"># 查看volume列表</span>
+docker volume ls
+
+<span class="hljs-comment"># 查看网络列表</span>
+docker network ls
+</code></pre>
+<blockquote>
+<p>镜像</p>
+</blockquote>
+<p>Docker默认拉取的架构是与主机的架构相同，当你在一个特定的架构上运行Docker命令时，Docker将自动尝试拉取与该架构匹配的镜像。例如，如果你在x86架构的主机上运行Docker命令，Docker将尝试拉取x86架构的镜像</p>
+<p>这意味着Docker会自动适配主机的架构，并拉取相应的镜像供使用。如果需要指定架构，可以加上<code>--platform=arm64</code>参数</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># 查看本地镜像</span>
+docker images
+
+<span class="hljs-comment"># 搜索镜像</span>
+docker search neo4j
+<span class="hljs-comment"># 拉取镜像  如果需要指定架构，可以加上`--platform=arm64`参数</span>
+docker pull 镜像名:tag
+
+<span class="hljs-comment"># 删除镜像 ------当前镜像没有被任何容器使用才可以删除</span>
+docker rmi <span class="hljs-_">-f</span> 镜像名/镜像ID
+<span class="hljs-comment"># 删除多个 其镜像ID或镜像用用空格隔开即可</span>
+docker rmi <span class="hljs-_">-f</span> 镜像名/镜像ID 镜像名/镜像ID
+
+<span class="hljs-comment"># 保存镜像，将我们的镜像保存为tar压缩文件，这样方便镜像转移和保存</span>
+<span class="hljs-comment"># 然后可以在任何一台安装了docker的服务器上加载这个镜像</span>
+docker save 镜像名/镜像ID -o 镜像保存在哪个位置与名字
+docker save -o my_ubuntu_v3.tar runoob/ubuntu:v3
+
+<span class="hljs-comment"># 加载镜像</span>
+docker load --input my_ubuntu_v3.tar
+
+<span class="hljs-comment"># 镜像重命名</span>
+docker tag &lt;IMAGE_ID&gt; &lt;NEW_REPOSITORY&gt;:&lt;TAG&gt;
+</code></pre>
+<blockquote>
+<p>容器</p>
+</blockquote>
+<pre><code class="lang-sh"><span class="hljs-comment"># 创建一个全新的容器，不会立即运行</span>
+docker create  --name my_container nginx:latest
+<span class="hljs-comment"># 创建和启动的组合，创建了一个新容器并立即启动它，-d表示后台</span>
+docker run --name my_container <span class="hljs-_">-d</span> nginx:latest
+
+<span class="hljs-comment"># 启动已终止容器</span>
+docker container start
+<span class="hljs-comment"># 停止容器</span>
+docker stop 容器ID或者容器名
+<span class="hljs-comment"># 重启容器</span>
+docker restart 容器ID或者容器名
+
+<span class="hljs-comment"># 列出所有在运行的容器信息</span>
+docker ps
+<span class="hljs-comment"># 查看本地所有容器</span>
+docker ps <span class="hljs-_">-a</span>
+
+<span class="hljs-comment"># 删除指定容器</span>
+docker rm <span class="hljs-_">-f</span> &lt;container_id0&gt; &lt;container_id1&gt;
+<span class="hljs-comment"># 删除未启动成功的容器</span>
+docker rm $(docker ps <span class="hljs-_">-a</span>|grep Created|awk <span class="hljs-string">'{print $1}'</span>)
+<span class="hljs-comment"># 删除所有未运行的容器</span>
+docker rm $(docker ps <span class="hljs-_">-a</span>|grep Created|awk <span class="hljs-string">'{print $1}'</span>)
+
+<span class="hljs-comment"># 容器重命名</span>
+docker rename CONTAINER NEW_NAME
+</code></pre>
+<p>镜像打包工具  Buildpacks、Dockerfile</p>
+<p><a href="https://www.baeldung.com/ops/docker-dockerfile-docker-compose" target="_blank">Docker, Dockerfile, 和Docker Compose区别 | Baeldung</a></p>
+<p>Docker Compose允许我们定义容器共享的共同对象。例如，我们可以一次性定义一个卷，然后把它挂在每个容器里，这样它们就可以共享一个共同的文件系统。或者，我们可以定义一个或多个容器用来通信的网络。</p>
+<p>Docker Compose只是一个协调多个容器的工具。其他选择包括Kubernetes、Openshift和Apache Mesos</p>
+<p><a href="https://www.anquanclub.cn/5985.html" target="_blank">Docker容器迁移到其他服务器的5种方法详解_docker</a></p>
+<h2 id="目录挂载">1.4 目录挂载</h2>
+<ul>
+<li>使用 Docker 运行后，我们改了项目代码不会立刻生效，需要重新<code>build</code>和<code>run</code>，很是麻烦</li>
+<li>容器里面产生的数据，例如 log 文件，数据库备份文件，容器删除后就丢失了</li>
+</ul>
+<blockquote>
+<p>目录挂载解决以上问题</p>
+</blockquote>
+<ul>
+<li><code>bind mount</code> 直接把宿主机目录映射到容器内，适合挂代码目录和配置文件。可挂到多个容器上</li>
+<li><code>volume</code> 由容器创建和管理，创建在宿主机，所以删除容器不会丢失，官方推荐，更高效，Linux 文件系统，适合存储数据库数据。可挂到多个容器上</li>
+<li><code>tmpfs mount</code> 适合存储临时文件，存宿主机内存中。不可多容器共享</li>
+</ul>
+<blockquote>
+<p>演示</p>
+</blockquote>
+<pre><code class="lang-cmd"># bind mount 方式
+docker run -p <span class="hljs-number">8080</span>:<span class="hljs-number">8080</span> --name test-hello -v D:/code:/app -d test:v1
+
+# volume 方式
+docker run -p <span class="hljs-number">8080</span>:<span class="hljs-number">8080</span> --name test-hello -v db-data:/app -d test:v1
+</code></pre>
+<h2 id="多容器通信">1.5 多容器通信</h2>
+<h3 id="虚拟网络">1.5.1 虚拟网络</h3>
+<p>要想多容器之间互通，从 Web 容器访问 Redis 容器，我们只需要把他们放到同个网络中就可以了</p>
+<p>创建一个名为<code>test-net</code>的网络：</p>
+<pre><code>docker network create test-net
+</code></pre><p>运行 Redis 在 <code>test-net</code> 网络中，别名<code>redis</code></p>
+<pre><code class="lang-cmd"># network-alias指的是网络的别名
+docker run -d --name redis --network redis-<span class="hljs-built_in">net</span> --network-alias redis redis:latest
+</code></pre>
+<p>使用时url填写<code>redis：//redis:6379</code></p>
+<blockquote>
+<p>运行 Web 项目，使用同个网络</p>
+</blockquote>
+<pre><code class="lang-cmd">docker run -p <span class="hljs-number">8080</span>:<span class="hljs-number">8080</span> --name test -v D:/test:/app --network redis-<span class="hljs-built_in">net</span> -d test:v0
+</code></pre>
+<h3 id="docker-compose">1.5.2 Docker-Compose</h3>
+<p>假设运行了两个容器：Web 项目 + Redis</p>
+<p>如果项目依赖更多的第三方软件，我们需要管理的容器就更加多，每个都要单独配置运行，指定网络</p>
+<p>我们可以使用 docker-compose 把项目的多个服务集合到一起，一键运行</p>
+<blockquote>
+<p>安装 Docker Compose</p>
+</blockquote>
+<ul>
+<li>如果你是安装的桌面版 Docker，不需要额外安装，已经包含了</li>
+<li>如果是没图形界面的服务器版 Docker，你需要单独安装 <a href="https://docs.docker.com/compose/install/#install-compose-on-linux-systems" target="_blank">安装文档</a></li>
+<li>运行<code>docker-compose</code>检查是否安装成功</li>
+</ul>
+<blockquote>
+<p><a href="https://docs.docker.com/compose/" target="_blank">编写脚本</a></p>
+</blockquote>
+<p>要把项目依赖的多个服务集合到一起，我们需要编写一个<code>docker-compose.yml</code>文件，描述依赖哪些服务</p>
+<p>容器默认时间不是北京时间，增加 TZ=Asia/Shanghai 可以改为北京时间</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">"3.7"</span>
+
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">  app:</span>
+<span class="hljs-attr">    build:</span> ./  <span class="hljs-comment"># 或者直接使用镜像  image: narutohyc/ubuntu:v0</span>
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-number">80</span>:<span class="hljs-number">8080</span>
+<span class="hljs-attr">    volumes:</span>
+<span class="hljs-bullet">      -</span> ./:/app
+<span class="hljs-attr">    environment:</span>
+<span class="hljs-bullet">      -</span> TZ=Asia/Shanghai
+<span class="hljs-attr">  redis:</span>
+<span class="hljs-attr">    image:</span> redis:<span class="hljs-number">5.0</span><span class="hljs-number">.13</span>
+<span class="hljs-attr">    volumes:</span>
+<span class="hljs-attr">      - redis:</span>/data
+<span class="hljs-attr">    environment:</span>
+<span class="hljs-bullet">      -</span> TZ=Asia/Shanghai
+
+<span class="hljs-attr">volumes:</span>
+<span class="hljs-attr">  redis:</span>
+</code></pre>
+<p>在<code>docker-compose.yml</code> 文件所在目录，执行：<code>docker-compose up</code>就可以跑起来了，<a href="https://docs.docker.com/compose/reference/up/" target="_blank">文档在这</a></p>
+<p>在后台运行只需要加一个 -d 参数<code>docker-compose up -d</code></p>
+<table>
+<thead>
+<tr>
+<th>动作</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看运行状态</td>
+<td><code>docker-compose ps</code></td>
+</tr>
+<tr>
+<td>停止运行</td>
+<td><code>docker-compose stop</code></td>
+</tr>
+<tr>
+<td>重启</td>
+<td><code>docker-compose restart</code></td>
+</tr>
+<tr>
+<td>重启单个服务</td>
+<td><code>docker-compose restart service-name</code></td>
+</tr>
+<tr>
+<td>进入容器命令行</td>
+<td><code>docker-compose exec service-name sh</code></td>
+</tr>
+<tr>
+<td>查看容器运行log</td>
+<td><code>docker-compose logs [service-name]</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hello-world">1.6 hello world</h2>
+<blockquote>
+<p>创建dockfile，新建一个<code>Dockerfile</code>文件</p>
+</blockquote>
+<pre><code class="lang-cmd"># 使用基础镜像，选择适合您的环境
+FROM ubuntu:<span class="hljs-number">20</span>.<span class="hljs-number">04</span>
+
+# 安装依赖库和工具
+RUN apt update
+RUN apt-get install -y wget
+
+# 设置工作目录
+WORKDIR /app
+</code></pre>
+<blockquote>
+<p>构建镜像，在<code>Dockerfile</code>目录下，执行以下命令，<strong>-t</strong>后面跟的是镜像名和版本，这里会构建一个<code>fastchat</code>镜像，版本号为<code>v0</code>，</p>
+</blockquote>
+<pre><code class="lang-cmd">docker build -t fastchat:v0 .
+</code></pre>
+<p>如果出现网络问题，需要配置代理，可以带上<code>--build-arg</code>参数</p>
+<pre><code class="lang-cmd">docker build -t fastchat:v0 --build-arg http_proxy=http://<span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">0</span>.xx:xx --build-arg https_proxy=http://<span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">0</span>.xx:xx .
+</code></pre>
+<p>如果需要指定dockfile文件，可以使用<code>-f</code>参数</p>
+<pre><code class="lang-cmd">docker build -f Q:\pyCharmWS\chatgpts\dockfiles\Dockerfile-ubuntu -t ubuntu:v0 .
+</code></pre>
+<p>除了自己写dockfile，还可以使用<code>docker pull</code>拉取现成的镜像</p>
+<blockquote>
+<p>查看镜像列表</p>
+</blockquote>
+<pre><code class="lang-cmd">docker images
+
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+fastchat     v0        <span class="hljs-number">20</span>ee81939779   <span class="hljs-number">20</span> seconds ago   <span class="hljs-number">115</span>MB
+</code></pre>
+<blockquote>
+<p>启动镜像</p>
+</blockquote>
+<pre><code class="lang-cmd">docker run -itd -p <span class="hljs-number">8080</span>:<span class="hljs-number">80</span> --name ubuntu-test fastchat:v0
+
+&gt;&gt;&gt; <span class="hljs-number">918</span>a3b2ccc42436e01c5033021ba97d5bd4c56df48b2c549bf01855d9979333c
+</code></pre>
+<p><code>docker run -itd</code>表示在后台运行容器，并允许与容器进行交互，同时为容器分配一个伪终端</p>
+<p>将容器的80端口映射到主机的8080端口</p>
+<p><code>--name ubuntu-test</code>用于指定容器的名称为`ubuntu-test，返回一个容器id</p>
+<p>如果已执行就退出'Exit(0)'，可以加上参数<code>--entrypoint=/bin/bash</code>，这里会自动退出是因为Docker容器后台运行，就必须有一个前台进程。容器运行的命令如果不是那些一直挂起的命令(比如运行top，tail)就是会自动退出的</p>
+<blockquote>
+<p>查看容器列表</p>
+</blockquote>
+<pre><code class="lang-cmd">docker ps
+
+CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS          PORTS     NAMES
+<span class="hljs-number">918</span>a3b2ccc42   fastchat:v0   "/bin/bash"   <span class="hljs-number">20</span> seconds ago   Up <span class="hljs-number">19</span> seconds             ubuntu-test
+</code></pre>
+<p><code>CONTAINER ID</code>指的是容器ID</p>
+<blockquote>
+<p>进入容器</p>
+</blockquote>
+<pre><code class="lang-cmd">docker exec -it ubuntu-test bash
+</code></pre>
+<p>输入<code>exit</code>退出，container是不会被关闭的</p>
+<pre><code class="lang-cmd">docker attach ubuntu-test
+</code></pre>
+<p>使用快捷键退出：按下键盘上的<code>Ctrl + P</code>，然后按下<code>Ctrl + Q</code>，container是不会被关闭的</p>
+<p>或者输入<code>exit</code>退出，container是<strong>会</strong>被关闭的</p>
+<p>这个组合键可以分离终端与容器的连接，但不会停止容器的运行，将返回到宿主机的终端，而容器会继续在后台运行</p>
+<blockquote>
+<p>停止容器</p>
+</blockquote>
+<pre><code class="lang-cmd">docker stop ubuntu-test
+</code></pre>
+<p>当您执行<code>docker stop</code>命令停止容器后，容器的名称可能仍然保留在Docker中。如果您尝试使用相同的容器名称再次运行容器，会出现"重名"的错误</p>
+<pre><code class="lang-cmd"><span class="hljs-function">Q:\<span class="hljs-title">pyCharmWS</span>\<span class="hljs-title">chatgpts</span>\<span class="hljs-title">dockfiles</span>&gt;<span class="hljs-title">docker</span> <span class="hljs-title">run</span> -<span class="hljs-title">itd</span> --<span class="hljs-title">name</span> <span class="hljs-title">ubuntu</span>-<span class="hljs-title">test</span> <span class="hljs-title">fastchat:v0</span>
+<span class="hljs-title">docker</span>: <span class="hljs-title">Error</span> <span class="hljs-title">response</span> <span class="hljs-title">from</span> <span class="hljs-title">daemon</span>: <span class="hljs-title">Conflict</span>. <span class="hljs-title">The</span> <span class="hljs-title">container</span> <span class="hljs-title">name</span> "/<span class="hljs-title">ubuntu</span>-<span class="hljs-title">test</span>" <span class="hljs-title">is</span> <span class="hljs-title">already</span> <span class="hljs-title">in</span> <span class="hljs-title">use</span> <span class="hljs-title">by</span> <span class="hljs-title">container</span> "918<span class="hljs-title">a3b2ccc42436e01c5033021ba97d5bd4c56df48b2c549bf01855d9979333c</span>". <span class="hljs-title">You</span> <span class="hljs-title">have</span> <span class="hljs-title">to</span> <span class="hljs-title">remove</span> (<span class="hljs-title">or</span> <span class="hljs-title">rename</span>) <span class="hljs-title">that</span> <span class="hljs-title">container</span> <span class="hljs-title">to</span> <span class="hljs-title">be</span> <span class="hljs-title">able</span> <span class="hljs-title">to</span> <span class="hljs-title">reuse</span> <span class="hljs-title">that</span> <span class="hljs-title">name</span>.
+<span class="hljs-title">See</span> '<span class="hljs-title">docker</span> <span class="hljs-title">run</span> --<span class="hljs-title">help</span>'.
+</span></code></pre>
+<p>这是因为Docker要求容器名称在给定的命名空间中必须是唯一的。当您停止容器时，该容器的名称不会立即从Docker中删除，以便您可以查看已停止容器的状态和日志等信息</p>
+<p>这时候可以<code>更改原来容器的名称</code>或<code>删除已停止的容器</code></p>
+<ul>
+<li><p>docker rename ubuntu-old ubuntu-test</p>
+<pre><code class="lang-cmd"><span class="hljs-function">Q:\<span class="hljs-title">pyCharmWS</span>\<span class="hljs-title">chatgpts</span>\<span class="hljs-title">dockfiles</span>&gt;<span class="hljs-title">docker</span> <span class="hljs-title">ps</span> -<span class="hljs-title">a</span>
+<span class="hljs-title">CONTAINER</span> <span class="hljs-title">ID</span>   <span class="hljs-title">IMAGE</span>         <span class="hljs-title">COMMAND</span>       <span class="hljs-title">CREATED</span>          <span class="hljs-title">STATUS</span>                        <span class="hljs-title">PORTS</span>     <span class="hljs-title">NAMES</span>
+918<span class="hljs-title">a3b2ccc42</span>   <span class="hljs-title">fastchat:v0</span>   "/<span class="hljs-title">bin</span>/<span class="hljs-title">bash</span>"   41 <span class="hljs-title">minutes</span> <span class="hljs-title">ago</span>   <span class="hljs-title">Exited</span> (130) 11 <span class="hljs-title">minutes</span> <span class="hljs-title">ago</span>             <span class="hljs-title">ubuntu</span>-<span class="hljs-title">test</span>
+</span></code></pre>
+</li>
+<li><p>docker rm ubuntu-test</p>
+</li>
+</ul>
+<blockquote>
+<p>重启容器</p>
+</blockquote>
+<pre><code class="lang-cmd">docker restart ubuntu-test
+</code></pre>
+<blockquote>
+<p>将容器保存为镜像，以便稍后再次使用或与其他人共享</p>
+</blockquote>
+<p>要将容器保存为镜像，可以使用<code>docker commit</code>命令。以下是保存容器为镜像的步骤：</p>
+<ol>
+<li><p>确保您的容器处于停止状态。如果容器正在运行，请先停止它：</p>
+<pre><code class="lang-cmd">docker stop &lt;container_name_or_id&gt;
+</code></pre>
+</li>
+<li><p>使用<code>docker commit</code>命令将容器保存为镜像。在命令中指定容器的名称或ID以及要为新镜像指定的名称和标签：</p>
+<pre><code class="lang-cmd">docker commit &lt;container_name_or_id&gt; &lt;new_image_name:tag&gt;
+</code></pre>
+<p>例如：</p>
+<pre><code class="lang-cmd">docker commit mycontainer myimage:v1
+</code></pre>
+<p>这将创建一个名为<code>myimage</code>，标签为<code>v1</code>的新镜像</p>
+</li>
+<li><p>等待<code>docker commit</code>命令完成，它会将容器的文件系统和元数据保存为新的镜像。一旦完成，您可以使用<code>docker images</code>命令查看新创建的镜像</p>
+</li>
+</ol>
+<p>现在，您已经将容器保存为新的镜像。您可以使用该镜像创建新的容器，或将其推送到镜像仓库以供其他人使用</p>
+<p>请注意，使用<code>docker commit</code>命令保存容器为镜像时，镜像将包含容器中当前的文件系统状态和配置。这意味着如果容器中有任何不必要的文件或敏感信息，它们也会包含在保存的镜像中。因此，在保存容器之前，最好确保容器中不包含不必要的文件，并遵循最佳实践来保护敏感信息</p>
+<p>值得一提的是，<code>docker commit</code> 命令是将容器的状态保存为镜像，而不是推荐的方法</p>
+<p>更好的做法是使用 Dockerfile 来定义容器的配置和状态，并使用 <code>docker build</code> 命令构建镜像。这样可以更好地跟踪和管理镜像的变更</p>
+<h2 id="dockfile">1.7 dockfile</h2>
+<blockquote>
+<p>构建一个基于ubuntu的anaconda环境</p>
+</blockquote>
+<pre><code class="lang-cmd"># 使用基础镜像，选择适合您的环境
+# FROM arm64v8/ubuntu:<span class="hljs-number">20</span>.<span class="hljs-number">04</span>
+FROM ubuntu:<span class="hljs-number">20</span>.<span class="hljs-number">04</span>
+
+# 安装依赖库和工具
+RUN apt update
+RUN apt-get install -y wget
+
+# 下载并安装 Anaconda  https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
+RUN wget -qO ~/anaconda.sh https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-<span class="hljs-number">2023</span>.<span class="hljs-number">03</span>-<span class="hljs-number">0</span>-Linux-x86_64.sh
+# RUN wget -qO ~/anaconda.sh https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-<span class="hljs-number">2023</span>.<span class="hljs-number">03</span>-<span class="hljs-number">0</span>-Linux-aarch64.sh
+RUN /bin/bash ~/anaconda.sh -b -p /opt/anaconda3
+RUN rm ~/anaconda.sh
+
+# 将 Anaconda 添加到环境变量
+ENV <span class="hljs-built_in">PATH</span>="/opt/anaconda3/bin:${<span class="hljs-built_in">PATH</span>}"
+RUN conda create -y -n chat38 python=<span class="hljs-number">3</span>.<span class="hljs-number">8</span> anaconda
+
+# 设置工作目录
+WORKDIR /app
+
+# 指定全局 shell 环境，这样才能用source
+SHELL ["/bin/bash", "-c"]
+
+# 切换py环境
+<span class="hljs-built_in">CMD</span> source activate chat38
+RUN pip install simplejson
+</code></pre>
+<p>除了<code>SHELL ["/bin/bash", "-c"]</code>，还可以<strong>每次指定</strong>bash环境，<code>CMD /bin/bash -c "source activate chat38"</code></p>
+<h2 id="发布和部署">1.8 发布和部署</h2>
+<p>要将镜像发布到 Docker Hub 上，需要按照以下步骤进行操作：</p>
+<p><strong>注册 Docker Hub 账号</strong>，如果你还没有 Docker Hub 账号，首先需要在<a href="https://hub.docker.com/" target="_blank">Docker Hub</a>的官方网站上进行注册</p>
+<p><strong>登录 Docker Hub</strong>，使用以下命令在终端中登录到 Docker Hub</p>
+<pre><code class="lang-cmd"><span class="hljs-function">Q:\<span class="hljs-title">pyCharmWS</span>\<span class="hljs-title">chatgpts</span>\<span class="hljs-title">dockfiles</span>&gt;<span class="hljs-title">docker</span> <span class="hljs-title">login</span> -<span class="hljs-title">u</span> <span class="hljs-title">narutohyc</span>
+<span class="hljs-title">Password</span>:
+<span class="hljs-title">Login</span> <span class="hljs-title">Succeeded</span>
+</span></code></pre>
+<p><strong>标记镜像</strong>，在发布到 Docker Hub 之前，需要为镜像添加一个适当的标签，以便将其与你的 Docker Hub 用户名和存储库关联起来，使用以下命令为镜像添加标签</p>
+<pre><code class="lang-cmd">docker tag &lt;IMAGE_ID&gt; &lt;DOCKER_HUB_USERNAME&gt;/&lt;REPOSITORY_NAME&gt;:&lt;TAG&gt;
+</code></pre>
+<p>其中，<code>&lt;IMAGE_ID&gt;</code> 是你要发布的镜像的 ID，<code>&lt;DOCKER_HUB_USERNAME&gt;</code> 是你的 Docker Hub 用户名，<code>&lt;REPOSITORY_NAME&gt;</code> 是你想要为镜像设置的存储库名称，<code>&lt;TAG&gt;</code> 是一个可选的标签，用于标识镜像的版本号</p>
+<p><strong>发布镜像</strong>，使用以下命令将标记后的镜像发布到 Docker Hub</p>
+<pre><code class="lang-cmd">docker push &lt;DOCKER_HUB_USERNAME&gt;/&lt;REPOSITORY_NAME&gt;:&lt;TAG&gt;
+</code></pre>
+<p>这将把镜像推送到 Docker Hub 上的指定存储库中</p>
+<p><strong>确认发布</strong>，登录到 Docker Hub 的网站，访问你的 Docker Hub 账号，你应该能够在相应的存储库中看到已发布的镜像</p>
+<p>请注意，发布到 Docker Hub 的镜像将成为公开可访问的，任何人都可以从 Docker Hub 上获取并使用该镜像。如果你希望限制访问权限，可以考虑使用私有仓库，或者在 Docker Hub 上创建一个私有的组织来管理镜像的访问权限</p>
+<h2 id="示例">1.9 示例</h2>
+<blockquote>
+<p>演示 Docker 安装 Redis</p>
+</blockquote>
+<p>一个命令跑起来：<code>docker run -d -p 6379:6379 --name redis redis:latest</code></p>
+<p>命令参考：<a href="https://docs.docker.com/engine/reference/commandline/run/" target="_blank">https://docs.docker.com/engine/reference/commandline/run/</a></p>
+<blockquote>
+<p>安装 Wordpress</p>
+</blockquote>
+<p>定义<code>docker-compose.yml</code>文件</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">'3.1'</span>
+
+<span class="hljs-attr">services:</span>
+
+<span class="hljs-attr">  wordpress:</span>
+<span class="hljs-attr">    image:</span> wordpress
+<span class="hljs-attr">    restart:</span> always
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-number">8080</span>:<span class="hljs-number">80</span>
+<span class="hljs-attr">    environment:</span>
+<span class="hljs-attr">      WORDPRESS_DB_HOST:</span> db
+<span class="hljs-attr">      WORDPRESS_DB_USER:</span> exampleuser
+<span class="hljs-attr">      WORDPRESS_DB_PASSWORD:</span> examplepass
+<span class="hljs-attr">      WORDPRESS_DB_NAME:</span> exampledb
+<span class="hljs-attr">    volumes:</span>
+<span class="hljs-attr">      - wordpress:</span>/var/www/html
+
+<span class="hljs-attr">  db:</span>
+<span class="hljs-attr">    image:</span> mysql:<span class="hljs-number">5.7</span>
+<span class="hljs-attr">    restart:</span> always
+<span class="hljs-attr">    environment:</span>
+<span class="hljs-attr">      MYSQL_DATABASE:</span> exampledb
+<span class="hljs-attr">      MYSQL_USER:</span> exampleuser
+<span class="hljs-attr">      MYSQL_PASSWORD:</span> examplepass
+<span class="hljs-attr">      MYSQL_RANDOM_ROOT_PASSWORD:</span> <span class="hljs-string">'1'</span>
+<span class="hljs-attr">    volumes:</span>
+<span class="hljs-attr">      - db:</span>/var/lib/mysql
+
+<span class="hljs-attr">volumes:</span>
+<span class="hljs-attr">  wordpress:</span>
+<span class="hljs-attr">  db:</span>
+</code></pre>
+<p>执行<code>docker-compose up -d</code></p>
+<h1 id="实战neo4j">2 实战neo4j</h1>
+<blockquote>
+<p><a href="https://www.cnblogs.com/caoyusang/p/13610408.html" target="_blank">docker安装部署neo4j</a></p>
+</blockquote>
+<h2 id="安装neo4j">2.1 安装neo4j</h2>
+<blockquote>
+<p>拉取neo4j镜像</p>
+</blockquote>
+<ol>
+<li><p>从<a href="https://hub.docker.com/search?type=image" target="_blank">docker官方镜像</a>中找合适的镜像</p>
+<pre><code class="lang-sh">docker search neo4j
+</code></pre>
+</li>
+<li><p>拉取镜像源</p>
+<pre><code class="lang-sh">docker pull neo4j(:版本号) <span class="hljs-comment"># 缺省 ":版本号" 时默认安装latest版本的</span>
+</code></pre>
+</li>
+<li><p>查看本地镜像，检验是否拉取成功</p>
+<pre><code class="lang-sh">docker images
+</code></pre>
+</li>
+</ol>
+<h2 id="图算法插件">2.2 图算法插件</h2>
+<blockquote>
+<p>neo4j提供了一系列常用的<a href="https://neo4j.com/download-center/#ngds" target="_blank">图算法</a>，该算法库需要单独安装，注意版本对应关系</p>
+</blockquote>
+<ol>
+<li><p>点击上方官网链接，下载<code>Neo4j Graph Data Science</code>下的文件，放到<code>$NEO4J_HOME/plugins</code>目录中</p>
+</li>
+<li><p>将以下内容添加到您的<code>$NEO4J_HOME/conf/neo4j.conf</code>文件中，<a href="https://www.likecs.com/show-204290898.html" target="_blank">参考这里</a></p>
+<pre><code class="lang-yaml">dbms.security.procedures.unrestricted=apoc.*,gds.*
+</code></pre>
+<p>此配置条目是必需的，因为 GDS 库访问 Neo4j 的低级组件以最大化性能</p>
+</li>
+<li><p>重启 Neo4j，在docker下就是重启</p>
+</li>
+</ol>
+<blockquote>
+<p>为了验证您的安装，可以输入以下命令</p>
+</blockquote>
+<pre><code class="lang-cmd">RETURN gds.version()
+</code></pre>
+<p>要列出所有已安装的算法，请运行以下<code>gds.list()</code>过程</p>
+<pre><code class="lang-cmd"><span class="hljs-keyword">CALL</span> gds.list()
+</code></pre>
+<p>例子: <a href="https://blog.csdn.net/weixin_51432117/article/details/109965487" target="_blank">neo4j实现PageRank算法</a></p>
+<h2 id="启动neo4j">2.3 启动neo4j</h2>
+<p>找一个目录存放docker的各镜像运行目录，比如我这里选的是/home/huangyc/docker</p>
+<p>然后再在这个目录新建具体的镜像对应的文件夹/home/huangyc/docker/neo4j，在下面新建四个文件夹(实际上好像不需要手动建，执行命令时自动会新建)</p>
+<ul>
+<li><strong>data</strong>: 数据存放的文件夹</li>
+<li><strong>logs</strong>: 运行的日志文件夹</li>
+<li><strong>conf</strong>: 数据库配置文件夹(在配置文件<strong>neo4j.conf</strong>中配置包括开放远程连接、设置默认激活的数据库)</li>
+<li><strong>import</strong>: 为了大批量导入csv来构建数据库，需要导入的节点文件<strong>nodes.csv</strong>和关系文件<strong>rel.csv</strong>需要放到这个文件夹下</li>
+<li><strong>plugins</strong>: 存放jar插件</li>
+</ul>
+<blockquote>
+<p>启动命令格式如下</p>
+</blockquote>
+<pre><code class="lang-sh">docker run <span class="hljs-_">-d</span> --name container_name \  //<span class="hljs-_">-d</span>表示容器后台运行 --name指定容器名字
+    -p 7474:7474 -p 7687:7687 \  //映射容器的端口号到宿主机的端口号
+    -v /home/huangyc/docker/neo4j/data:/data \  //把容器内的数据目录挂载到宿主机的对应目录下
+    -v /home/huangyc/docker/neo4j/logs:/logs \  //挂载日志目录
+    -v /home/huangyc/docker/neo4j/conf:/var/lib/neo4j/conf   //挂载配置目录
+    -v /home/huangyc/docker/neo4j/import:/var/lib/neo4j/import \  //挂载数据导入目录
+    -v /home/huangyc/docker/neo4j/plugins:/var/lib/neo4j/plugins \  //挂载数据导入目录
+    --env NEO4J_AUTH=neo4j/password \  //设定数据库的用户名和和密码
+    neo4j //指定使用的镜像
+</code></pre>
+<p>也可以写成单行命令</p>
+<pre><code class="lang-sh">docker run <span class="hljs-_">-d</span> --name neo4j_hyc -p 7474:7474 -p 7687:7687 -v /home/huangyc/docker/neo4j/data:/data -v /home/huangyc/docker/neo4j/logs:/logs -v /home/huangyc/docker/neo4j/conf:/var/lib/neo4j/conf -v /home/huangyc/docker/neo4j/import:/var/lib/neo4j/import -v /home/huangyc/docker/neo4j/plugins:/var/lib/neo4j/plugins --env NEO4J_AUTH=neo4j/hyc neo4j
+</code></pre>
+<h2 id="py库">2.4 py库</h2>
+<p>使用Python访问图数据库，主要使用的库时<code>py2neo</code>和<code>neo4j</code>，</p>
+<ul>
+<li>py2neo通过操作python变量，达到操作neo4j的目的，同时也支持<code>cypher</code>语法</li>
+<li>neo4j主要时执行CQL(cypher)语句</li>
+</ul>
+<p><a href="https://neo4j.com/docs/cypher-refcard/current/" target="_blank">cypher 语法</a></p>
+<p>安装</p>
+<pre><code class="lang-sh">pip install py2neo
+</code></pre>
+<p>使用例子</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-keyword">from</span> py2neo <span class="hljs-keyword">import</span> Graph, Node, Relationship
+
+<span class="hljs-comment"># 连接neo4j数据库，输入地址、用户名、密码</span>
+graph = Graph(<span class="hljs-string">"http://192.168.1.106:7474"</span>, name=<span class="hljs-string">"neo4j"</span>)
+graph.delete_all()
+<span class="hljs-comment"># 创建结点</span>
+test_node_1 = Node(<span class="hljs-string">'ru_yi_zhuan'</span>, name=<span class="hljs-string">'皇帝'</span>) <span class="hljs-comment"># 修改的部分</span>
+test_node_2 = Node(<span class="hljs-string">'ru_yi_zhuan'</span>, name=<span class="hljs-string">'皇后'</span>) <span class="hljs-comment"># 修改的部分</span>
+test_node_3 = Node(<span class="hljs-string">'ru_yi_zhuan'</span>, name=<span class="hljs-string">'公主'</span>) <span class="hljs-comment"># 修改的部分</span>
+
+graph.create(test_node_1)
+graph.create(test_node_2)
+graph.create(test_node_3)
+
+<span class="hljs-comment"># 创建关系</span>
+<span class="hljs-comment"># 分别建立了test_node_1指向test_node_2和test_node_2指向test_node_1两条关系，关系的类型为"丈夫、妻子"，两条关系都有属性count，且值为1。</span>
+node_1_zhangfu_node_1 = Relationship(test_node_1, <span class="hljs-string">'丈夫'</span>, test_node_2)
+node_1_zhangfu_node_1[<span class="hljs-string">'count'</span>] = <span class="hljs-number">1</span>
+node_2_qizi_node_1 = Relationship(test_node_2, <span class="hljs-string">'妻子'</span>, test_node_1)
+node_2_munv_node_1 = Relationship(test_node_2, <span class="hljs-string">'母女'</span>, test_node_3)
+
+node_2_qizi_node_1[<span class="hljs-string">'count'</span>] = <span class="hljs-number">1</span>
+
+graph.create(node_1_zhangfu_node_1)
+graph.create(node_2_qizi_node_1)
+graph.create(node_2_munv_node_1)
+
+print(graph)
+print(test_node_1)
+print(test_node_2)
+print(node_1_zhangfu_node_1)
+print(node_2_qizi_node_1)
+print(node_2_munv_node_1)
+</code></pre>
+<p>安装</p>
+<pre><code class="lang-sh">pip install neo4j
+</code></pre>
+<p>使用例子</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> neo4j <span class="hljs-keyword">import</span> GraphDatabase
+
+driver = GraphDatabase.driver(<span class="hljs-string">"bolt://localhost:7687"</span>, auth=(<span class="hljs-string">"neo4j"</span>, <span class="hljs-string">"password"</span>))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_friend</span><span class="hljs-params">(tx, name, friend_name)</span>:</span>
+    tx.run(<span class="hljs-string">"MERGE (a:Person {name: $name}) "</span>
+           <span class="hljs-string">"MERGE (a)-[:KNOWS]-&gt;(friend:Person {name: $friend_name})"</span>,
+           name=name, friend_name=friend_name)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_friends</span><span class="hljs-params">(tx, name)</span>:</span>
+    <span class="hljs-keyword">for</span> record <span class="hljs-keyword">in</span> tx.run(<span class="hljs-string">"MATCH (a:Person)-[:KNOWS]-&gt;(friend) WHERE a.name = $name "</span>
+                         <span class="hljs-string">"RETURN friend.name ORDER BY friend.name"</span>, name=name):
+        print(record[<span class="hljs-string">"friend.name"</span>])
+
+<span class="hljs-keyword">with</span> driver.session() <span class="hljs-keyword">as</span> session:
+    session.write_transaction(add_friend, <span class="hljs-string">"Arthur"</span>, <span class="hljs-string">"Guinevere"</span>)
+    session.write_transaction(add_friend, <span class="hljs-string">"Arthur"</span>, <span class="hljs-string">"Lancelot"</span>)
+    session.write_transaction(add_friend, <span class="hljs-string">"Arthur"</span>, <span class="hljs-string">"Merlin"</span>)
+    session.read_transaction(print_friends, <span class="hljs-string">"Arthur"</span>)
+</code></pre>
+<h1 id="实战nebula">3 实战nebula</h1>
+<h2 id="基本介绍">3.1 基本介绍</h2>
+<p>NebulaGraph 由三种服务构成：Graph 服务、Meta 服务和 Storage 服务，是一种存储与计算分离的架构</p>
+<blockquote>
+<p>Meta 服务</p>
+</blockquote>
+<p>Meta 服务是由 <code>nebula-metad 进程</code>提供的，用户可以根据场景配置 nebula-metad 进程数量：</p>
+<ul>
+<li>测试环境中，用户可以在 NebulaGraph 集群中部署 1 个或 3 个 nebula-metad 进程。如果要部署 3 个，用户可以将它们部署在 1 台机器上，或者分别部署在不同的机器上。</li>
+<li>生产环境中，建议在 NebulaGraph 集群中部署 3 个 nebula-metad 进程。请将这些进程部署在不同的机器上以保证高可用。</li>
+</ul>
+<p>所有 nebula-metad 进程构成了基于 Raft 协议的集群，其中一个进程是 leader，其他进程都是 follower。</p>
+<p>leader 是由多数派选举出来，只有 leader 能够对客户端或其他组件提供服务，其他 follower 作为候补，如果 leader 出现故障，会在所有 follower 中选举出新的 leader。</p>
+<blockquote>
+<p>Graph 服务</p>
+</blockquote>
+<p>Graph 服务是由<code>nebula-graphd 进程</code>提供，服务主要负责处理查询请求，包括解析查询语句、校验语句、生成执行计划以及按照执行计划执行四个大步骤，查询请求发送到 Graph 服务后，会由如下模块依次处理：</p>
+<ol>
+<li><strong>Parser</strong>：词法语法解析模块。</li>
+<li><strong>Validator</strong>：语义校验模块。</li>
+<li><strong>Planner</strong>：执行计划与优化器模块。</li>
+<li><strong>Executor</strong>：执行引擎模块。</li>
+</ol>
+<blockquote>
+<p>Storage 服务</p>
+</blockquote>
+<p>NebulaGraph 的存储包含两个部分，一个是 Meta 相关的存储，称为 Meta 服务，在前文已有介绍。</p>
+<p>另一个是具体数据相关的存储，称为 Storage 服务。其运行在 <code>nebula-storaged 进程</code>中</p>
+<h2 id="环境搭建">3.2 环境搭建</h2>
+<blockquote>
+<p>以<a href="https://docs.nebula-graph.com.cn/3.2.1/4.deployment-and-installation/2.compile-and-install-nebula-graph/deploy-nebula-graph-cluster/" target="_blank">nebula 3.2.1</a>为例</p>
+</blockquote>
+<p>下载并安装NebulaGraph</p>
+<pre><code class="lang-sh">wget https://oss-cdn.nebula-graph.com.cn/package/3.2.1/nebula-graph-3.2.1.el7.x86_64.rpm
+sudo rpm -ivh --prefix=/home/huangyc/nebula nebula-graph-3.2.1.el7.x86_64.rpm
+</code></pre>
+<p><code>--prefix</code>为可选项，用于指定安装路径</p>
+<p>如不设置，系统会将 NebulaGraph 安装到默认路径<code>/usr/local/nebula/</code></p>
+<blockquote>
+<p>集群配置</p>
+</blockquote>
+<p>集群配置需要保证集群机器<a href="https://hycbook.com/article/d192a1af.html" target="_blank">配置ssh免密</a></p>
+<p>修改每个服务器上的 NebulaGraph 配置文件</p>
+<p>NebulaGraph 的所有配置文件均位于安装目录的<code>etc</code>目录内，包括<code>nebula-graphd.conf</code>、<code>nebula-metad.conf</code>和<code>nebula-storaged.conf</code>，用户可以只修改所需服务的配置文件。各个机器需要修改的配置文件如下。</p>
+<table>
+<thead>
+<tr>
+<th>机器名称</th>
+<th>待修改配置文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><code>nebula-graphd.conf</code>、<code>nebula-storaged.conf</code>、<code>nebula-metad.conf</code></td>
+</tr>
+<tr>
+<td>B</td>
+<td><code>nebula-graphd.conf</code>、<code>nebula-storaged.conf</code>、<code>nebula-metad.conf</code></td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>nebula-graphd.conf</code>、<code>nebula-storaged.conf</code>、<code>nebula-metad.conf</code></td>
+</tr>
+<tr>
+<td>D</td>
+<td><code>nebula-graphd.conf</code>、<code>nebula-storaged.conf</code></td>
+</tr>
+<tr>
+<td>E</td>
+<td><code>nebula-graphd.conf</code>、<code>nebula-storaged.conf</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>机器 A 配置</p>
+<p>nebula-graphd.conf</p>
+<pre><code class="lang-sh"><span class="hljs-comment">########## networking ##########</span>
+<span class="hljs-comment"># Comma separated Meta Server Addresses</span>
+--meta_server_addrs=192.168.10.111:9559,192.168.10.112:9559,192.168.10.113:9559
+<span class="hljs-comment"># Local IP used to identify the nebula-graphd process.</span>
+<span class="hljs-comment"># Change it to an address other than loopback if the service is distributed or</span>
+<span class="hljs-comment"># will be accessed remotely.</span>
+--local_ip=192.168.10.111
+<span class="hljs-comment"># Network device to listen on</span>
+--listen_netdev=any
+<span class="hljs-comment"># Port to listen on</span>
+--port=9669
+</code></pre>
+<p>nebula-storaged.conf</p>
+<pre><code class="lang-sh"><span class="hljs-comment">########## networking ##########</span>
+<span class="hljs-comment"># Comma separated Meta server addresses</span>
+--meta_server_addrs=192.168.10.111:9559,192.168.10.112:9559,192.168.10.113:9559
+<span class="hljs-comment"># Local IP used to identify the nebula-storaged process.</span>
+<span class="hljs-comment"># Change it to an address other than loopback if the service is distributed or</span>
+<span class="hljs-comment"># will be accessed remotely.</span>
+--local_ip=192.168.10.111
+<span class="hljs-comment"># Storage daemon listening port</span>
+--port=9779
+</code></pre>
+<p>nebula-metad.conf</p>
+<pre><code class="lang-sh"><span class="hljs-comment">########## networking ##########</span>
+<span class="hljs-comment"># Comma separated Meta Server addresses</span>
+--meta_server_addrs=192.168.10.111:9559,192.168.10.112:9559,192.168.10.113:9559
+<span class="hljs-comment"># Local IP used to identify the nebula-metad process.</span>
+<span class="hljs-comment"># Change it to an address other than loopback if the service is distributed or</span>
+<span class="hljs-comment"># will be accessed remotely.</span>
+--local_ip=192.168.10.111
+<span class="hljs-comment"># Meta daemon listening port</span>
+--port=9559
+</code></pre>
+</li>
+<li><p>机器 D 配置</p>
+<p>nebula-graphd.conf</p>
+<pre><code class="lang-sh"><span class="hljs-comment">########## networking ##########</span>
+<span class="hljs-comment"># Comma separated Meta Server Addresses</span>
+--meta_server_addrs=192.168.10.111:9559,192.168.10.112:9559,192.168.10.113:9559
+<span class="hljs-comment"># Local IP used to identify the nebula-graphd process.</span>
+<span class="hljs-comment"># Change it to an address other than loopback if the service is distributed or</span>
+<span class="hljs-comment"># will be accessed remotely.</span>
+--local_ip=192.168.10.114
+<span class="hljs-comment"># Network device to listen on</span>
+--listen_netdev=any
+<span class="hljs-comment"># Port to listen on</span>
+--port=9669
+</code></pre>
+<p>nebula-storaged.conf</p>
+<pre><code class="lang-sh"><span class="hljs-comment">########## networking ##########</span>
+<span class="hljs-comment"># Comma separated Meta server addresses</span>
+--meta_server_addrs=192.168.10.111:9559,192.168.10.112:9559,192.168.10.113:9559
+<span class="hljs-comment"># Local IP used to identify the nebula-storaged process.</span>
+<span class="hljs-comment"># Change it to an address other than loopback if the service is distributed or</span>
+<span class="hljs-comment"># will be accessed remotely.</span>
+--local_ip=192.168.10.114
+<span class="hljs-comment"># Storage daemon listening port</span>
+--port=9779
+</code></pre>
+</li>
+<li><p>ABC三台配置除了<code>local_ip</code>，其他都一致，DE两台配置除了<code>local_ip</code>，其他都一致</p>
+</li>
+</ul>
+<p>启动服务</p>
+<h2 id="命令学习">3.3 命令学习</h2>
+<p>使用脚本<code>nebula.service</code>管理服务，包括启动、停止、重启、中止和查看</p>
+<p><code>nebula.service</code>的默认路径是<code>/usr/local/nebula/scripts</code>，如果修改过安装路径，请使用实际路径</p>
+<blockquote>
+<p>语法</p>
+</blockquote>
+<pre><code class="lang-sh">sudo /usr/<span class="hljs-built_in">local</span>/nebula/scripts/nebula.service
+[-v] [-c &lt;config_file_path&gt;]
+&lt;start | stop | restart | <span class="hljs-built_in">kill</span> | status&gt;
+&lt;metad | graphd | storaged | all&gt;
+</code></pre>
+<p>比如对于非容器部署的 NebulaGraph，执行如下命令启动服务：</p>
+<pre><code class="lang-sh">sudo /usr/<span class="hljs-built_in">local</span>/nebula/scripts/nebula.service start all
+[INFO] Starting nebula-metad...
+[INFO] Done
+[INFO] Starting nebula-graphd...
+[INFO] Done
+[INFO] Starting nebula-storaged...
+[INFO] Done
+</code></pre>
+<p>执行如下命令查看 NebulaGraph 服务状态</p>
+<pre><code class="lang-sh">sudo /usr/<span class="hljs-built_in">local</span>/nebula/scripts/nebula.service status all
+</code></pre>
+<p>如果返回如下结果，表示 NebulaGraph 服务正常运行</p>
+<pre><code>[INFO] nebula-metad(33fd35e): Running as 29020, Listening on 9559
+[INFO] nebula-graphd(33fd35e): Running as 29095, Listening on 9669
+[WARN] nebula-storaged after v3.0.0 will not start service until it is added to cluster.
+[WARN] See Manage Storage hosts:ADD HOSTS in https://docs.nebula-graph.io/
+[INFO] nebula-storaged(33fd35e): Running as 29147, Listening on 9779
+</code></pre><p>正常启动 NebulaGraph 后，<code>nebula-storaged</code>进程的端口显示红色。这是因为<code>nebula-storaged</code>在启动流程中会等待<code>nebula-metad</code>添加当前 Storage 服务，当前 Storage 服务收到 Ready 信号后才会正式启动服务。从 3.0.0 版本开始，在配置文件中添加的 Storage 节点无法直接读写，配置文件的作用仅仅是将 Storage 节点注册至 Meta 服务中。必须使用<code>ADD HOSTS</code>命令后，才能正常读写 Storage 节点。</p>
+<blockquote>
+<p>注册</p>
+</blockquote>
+<p>具体是通过nebula-console命令行或者studio页面执行，用 java client 也可以的, 底层逻辑都是通过客户端发送一条 <code>add hosts xxxxx</code> query</p>
+<pre><code class="lang-sh">ADD HOSTS 192.168.40.39:9779, 192.168.40.40:9779, 192.168.40.41:9779;
+</code></pre>
+<p>比如使用python客户端</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> nebula3.gclient.net <span class="hljs-keyword">import</span> ConnectionPool
+<span class="hljs-keyword">from</span> nebula3.Config <span class="hljs-keyword">import</span> Config
+
+<span class="hljs-comment"># define a config</span>
+config = Config()
+config.max_connection_pool_size = <span class="hljs-number">10</span>
+<span class="hljs-comment"># init connection pool</span>
+connection_pool = ConnectionPool()
+<span class="hljs-comment"># if the given servers are ok, return true, else return false</span>
+ok = connection_pool.init([(<span class="hljs-string">'192.168.123.xx'</span>, <span class="hljs-number">9669</span>)], config)
+
+<span class="hljs-comment"># option 1 control the connection release yourself</span>
+<span class="hljs-comment"># get session from the pool</span>
+session = connection_pool.get_session(<span class="hljs-string">'root'</span>, <span class="hljs-string">'nebula'</span>)
+
+session.execute(<span class="hljs-string">"ADD HOSTS 192.168.123.24:9779"</span>)
+</code></pre>
+<p>等待20s后，重新查看服务状态，发现警告没有就说明成功了</p>
+<pre><code class="lang-sh">[root@localhost nebula]<span class="hljs-comment"># sudo scripts/nebula.service status all</span>
+[WARN] The maximum files allowed to open might be too few: 1024
+[INFO] nebula-metad(bb2e684): Running as 11660, Listening on 9559
+[INFO] nebula-graphd(bb2e684): Running as 11727, Listening on 9669
+[INFO] nebula-storaged(bb2e684): Running as 11764, Listening on 9779
+</code></pre>
+<blockquote>
+<p>清空图</p>
+</blockquote>
+<ul>
+<li><p>数据清除后，<strong>如无备份，无法恢复</strong>。使用该功能务必谨慎</p>
+<p><code>CLEAR SPACE</code>不是原子性操作。如果执行出错，请重新执行，避免残留数据</p>
+</li>
+<li><p>图空间中的数据量越大，<code>CLEAR SPACE</code>消耗的时间越长</p>
+<p>如果<code>CLEAR SPACE</code>的执行因客户端连接超时而失败，可以增大 <a href="https://docs.nebula-graph.com.cn/3.2.1/5.configurations-and-logs/1.configurations/3.graph-config/" target="_blank">Graph 服务配置</a>中<code>storage_client_timeout_ms</code>参数的值</p>
+</li>
+<li><p>在<code>CLEAR SPACE</code>的执行过程中，向该图空间写入数据的行为不会被自动禁止</p>
+<p>这样的写入行为可能导致<code>CLEAR SPACE</code>清除数据不完全，残留的数据也可能受到损坏</p>
+</li>
+</ul>
+<pre><code class="lang-sh">CLEAR SPACE [IF EXISTS] &lt;space_name&gt;;
+</code></pre>
+<p>保留的数据<a href="https://docs.nebula-graph.com.cn/3.2.1/3.ngql-guide/9.space-statements/6.clear-space/#_4" target="_blank">¶</a></p>
+<p>图空间中，<code>CLEAR SPACE</code>不会删除的数据包括：</p>
+<ul>
+<li>Tag 信息</li>
+<li>Edge type 信息</li>
+<li>原生索引和全文索引的元数据</li>
+</ul>
+<p><code>DROP SPACE</code>语句用于删除指定图空间以及其中的所有信息</p>
+<pre><code class="lang-sh">DROP SPACE [IF EXISTS] &lt;graph_space_name&gt;;
+</code></pre>
+<h2 id="客户端">3.4 客户端</h2>
+<p>NebulaGraph 支持多种类型的客户端，包括命令行客户端、可视化界面客户端和流行编程语言客户端</p>
+<p>详情参见<a href="https://docs.nebula-graph.com.cn/3.2.1/14.client/1.nebula-client/" target="_blank">客户端列表</a></p>
+<blockquote>
+<p>前提条件<a href="https://docs.nebula-graph.com.cn/3.2.1/4.deployment-and-installation/connect-to-nebula-graph/#_1" target="_blank">¶</a></p>
+<p><a href="https://docs.nebula-graph.com.cn/3.2.1/nebula-console/" target="_blank">官方文档</a></p>
+</blockquote>
+<ul>
+<li><p>NebulaGraph 服务已<a href="https://docs.nebula-graph.com.cn/3.2.1/4.deployment-and-installation/manage-service/" target="_blank">启动</a></p>
+</li>
+<li><p>运行 NebulaGraph Console 的机器和运行 NebulaGraph 的服务器网络互通</p>
+</li>
+<li><p>NebulaGraph Console 的版本兼容 NebulaGraph 的版本</p>
+</li>
+</ul>
+<p>使用命令<code>arch</code>，查看系统结构，去<a href="https://github.com/vesoft-inc/nebula-console/releases" target="_blank">官网</a>下载安装包，重命名文件为<code>nebula_console</code></p>
+<ol>
+<li><p>为用户授予 nebula-console 文件的执行权限</p>
+<pre><code class="lang-sh">chmod 111 nebula-console
+</code></pre>
+</li>
+<li><p>在命令行界面中，切换工作目录至 nebula-console 文件所在目录，执行如下命令连接 NebulaGraph</p>
+<pre><code class="lang-sh">./nebula-console -addr &lt;ip&gt; -port &lt;port&gt; -u &lt;username&gt; -p &lt;password&gt; [-t 120] [<span class="hljs-_">-e</span> <span class="hljs-string">"nGQL_statement"</span> | <span class="hljs-_">-f</span> filename.nGQL]
+</code></pre>
+<p>例如，要连接到部署在 192.168.10.8 上的 Graph 服务，运行以下命令</p>
+<pre><code class="lang-sh">./nebula_console -addr 192.168.10.8 -port 9669 -u root -p nebula
+</code></pre>
+</li>
+</ol>
+<p>已安装 Python，版本为 3.6 及以上，版本对照表<a href="https://docs.nebula-graph.com.cn/3.2.1/14.client/5.nebula-python-client/#_2" target="_blank">¶</a></p>
+<table>
+<thead>
+<tr>
+<th>NebulaGraph 版本</th>
+<th>NebulaGraph Python 版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.2.1</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>2.6.x</td>
+<td>2.6.0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>pip安装</p>
+</blockquote>
+<pre><code class="lang-sh">$ pip install nebula3-python==&lt;version&gt;
+</code></pre>
+<blockquote>
+<p>初始化一些<a href="https://docs.nebula-graph.com.cn/3.2.1/2.quick-start/4.nebula-graph-crud/#_2" target="_blank">数据</a></p>
+</blockquote>
+<ol>
+<li><p>执行如下语句创建名为<code>basketballplayer</code>的图空间</p>
+<pre><code class="lang-sh">CREATE SPACE basketballplayer(partition_num=15, replica_factor=1, vid_<span class="hljs-built_in">type</span>=fixed_string(32));
+</code></pre>
+</li>
+<li><p>执行命令<code>SHOW HOSTS</code>检查分片的分布情况，确保平衡分布</p>
+<pre><code class="lang-sh">nebula&gt; SHOW HOSTS;
++-------------+-----------+-----------+-----------+--------------+----------------------------------+------------------------+---------+
+| Host        | Port      | HTTP port | Status    | Leader count | Leader distribution              | Partition distribution | Version |
++-------------+-----------+-----------+-----------+--------------+----------------------------------+------------------------+---------+
+| <span class="hljs-string">"storaged0"</span> | 9779      | 19669     | <span class="hljs-string">"ONLINE"</span>  | 5            | <span class="hljs-string">"basketballplayer:5"</span>             | <span class="hljs-string">"basketballplayer:5"</span>   | <span class="hljs-string">"3.1.0"</span> |
+| <span class="hljs-string">"storaged1"</span> | 9779      | 19669     | <span class="hljs-string">"ONLINE"</span>  | 5            | <span class="hljs-string">"basketballplayer:5"</span>             | <span class="hljs-string">"basketballplayer:5"</span>   | <span class="hljs-string">"3.1.0"</span> |
+| <span class="hljs-string">"storaged2"</span> | 9779      | 19669     | <span class="hljs-string">"ONLINE"</span>  | 5            | <span class="hljs-string">"basketballplayer:5"</span>             | <span class="hljs-string">"basketballplayer:5"</span>   | <span class="hljs-string">"3.1.0"</span> |
++-------------+-----------+-----------+-----------+--------------+----------------------------------+------------------------+---------+
+</code></pre>
+</li>
+<li><p>选择图空间<code>basketballplayer</code></p>
+<pre><code class="lang-sh">nebula[(none)]&gt; USE basketballplayer;
+</code></pre>
+<p>用户可以执行命令<code>SHOW SPACES</code>查看创建的图空间</p>
+<pre><code class="lang-sh">nebula&gt; SHOW SPACES;
++--------------------+
+| Name               |
++--------------------+
+| <span class="hljs-string">"basketballplayer"</span> |
++--------------------+
+</code></pre>
+</li>
+<li><p>创建 Tag 和 Edge type</p>
+<p>语法:</p>
+<pre><code class="lang-sh">CREATE {TAG | EDGE} [IF NOT EXISTS] {&lt;tag_name&gt; | &lt;edge_<span class="hljs-built_in">type</span>_name&gt;}
+    (
+      &lt;prop_name&gt; &lt;data_<span class="hljs-built_in">type</span>&gt; [NULL | NOT NULL] [DEFAULT &lt;default_value&gt;] [COMMENT <span class="hljs-string">'&lt;comment&gt;'</span>]
+      [{, &lt;prop_name&gt; &lt;data_<span class="hljs-built_in">type</span>&gt; [NULL | NOT NULL] [DEFAULT &lt;default_value&gt;] [COMMENT <span class="hljs-string">'&lt;comment&gt;'</span>]} ...] 
+    )
+    [TTL_DURATION = &lt;ttl_duration&gt;]
+    [TTL_COL = &lt;prop_name&gt;]
+    [COMMENT = <span class="hljs-string">'&lt;comment&gt;'</span>];
+</code></pre>
+<p>创建 Tag:<code>player</code>和<code>team</code>，以及 Edge type:<code>follow</code>和<code>serve</code>。说明如下表。</p>
+<p>| 名称   | 类型      | 属性                             |
+| ------ | --------- | -------------------------------- |
+| player | Tag       | name (string), age (int)         |
+| team   | Tag       | name (string)                    |
+| follow | Edge type | degree (int)                     |
+| serve  | Edge type | start_year (int), end_year (int) |</p>
+<pre><code class="lang-sh">CREATE TAG player(name string, age int);
+CREATE TAG team(name string);
+CREATE EDGE follow(degree int);
+CREATE EDGE serve(start_year int, end_year int);
+</code></pre>
+</li>
+<li><p>插入点和边</p>
+<ul>
+<li><p>插入点</p>
+<pre><code class="lang-sh">INSERT VERTEX [IF NOT EXISTS] [tag_props, [tag_props] ...]
+VALUES &lt;vid&gt;: ([prop_value_list])
+
+tag_props:
+  tag_name ([prop_name_list])
+
+prop_name_list: [prop_name [, prop_name] ...]
+prop_value_list: [prop_value [, prop_value] ...]
+</code></pre>
+<p><code>vid</code>是 Vertex ID 的缩写，<code>vid</code>在一个图空间中是唯一的。参数详情请参见 <a href="https://docs.nebula-graph.com.cn/3.2.1/3.ngql-guide/12.vertex-statements/1.insert-vertex/" target="_blank">INSERT VERTEX</a></p>
+</li>
+<li><p>插入边</p>
+<pre><code class="lang-sh">INSERT EDGE [IF NOT EXISTS] &lt;edge_<span class="hljs-built_in">type</span>&gt; ( &lt;prop_name_list&gt; ) VALUES 
+&lt;src_vid&gt; -&gt; &lt;dst_vid&gt;[@&lt;rank&gt;] : ( &lt;prop_value_list&gt; )
+[, &lt;src_vid&gt; -&gt; &lt;dst_vid&gt;[@&lt;rank&gt;] : ( &lt;prop_value_list&gt; ), ...];
+
+&lt;prop_name_list&gt; ::= [ &lt;prop_name&gt; [, &lt;prop_name&gt; ] ...]
+&lt;prop_value_list&gt; ::= [ &lt;prop_value&gt; [, &lt;prop_value&gt; ] ...]
+</code></pre>
+</li>
+</ul>
+<p>参数详情请参见 <a href="https://docs.nebula-graph.com.cn/3.2.1/3.ngql-guide/13.edge-statements/1.insert-edge/" target="_blank">INSERT EDGE</a></p>
+<ul>
+<li><p>插入代表球员和球队的点</p>
+<pre><code class="lang-sh">nebula&gt; INSERT VERTEX player(name, age) VALUES <span class="hljs-string">"player100"</span>:(<span class="hljs-string">"Tim Duncan"</span>, 42);
+nebula&gt; INSERT VERTEX player(name, age) VALUES <span class="hljs-string">"player101"</span>:(<span class="hljs-string">"Tony Parker"</span>, 36);
+nebula&gt; INSERT VERTEX player(name, age) VALUES <span class="hljs-string">"player102"</span>:(<span class="hljs-string">"LaMarcus Aldridge"</span>, 33);
+nebula&gt; INSERT VERTEX team(name) VALUES <span class="hljs-string">"team203"</span>:(<span class="hljs-string">"Trail Blazers"</span>), <span class="hljs-string">"team204"</span>:(<span class="hljs-string">"Spurs"</span>);
+</code></pre>
+</li>
+<li><p>插入代表球员和球队之间关系的边</p>
+<pre><code class="lang-sh">nebula&gt; INSERT EDGE follow(degree) VALUES <span class="hljs-string">"player101"</span> -&gt; <span class="hljs-string">"player100"</span>:(95);
+nebula&gt; INSERT EDGE follow(degree) VALUES <span class="hljs-string">"player101"</span> -&gt; <span class="hljs-string">"player102"</span>:(90);
+nebula&gt; INSERT EDGE follow(degree) VALUES <span class="hljs-string">"player102"</span> -&gt; <span class="hljs-string">"player100"</span>:(75);
+nebula&gt; INSERT EDGE serve(start_year, end_year) VALUES <span class="hljs-string">"player101"</span> -&gt; <span class="hljs-string">"team204"</span>:(1999, 2018),<span class="hljs-string">"player102"</span> -&gt; <span class="hljs-string">"team203"</span>:(2006,  2015);
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>查询数据<a href="https://docs.nebula-graph.com.cn/3.2.1/2.quick-start/4.nebula-graph-crud/#_7" target="_blank">¶</a></p>
+<ul>
+<li><p><a href="https://docs.nebula-graph.com.cn/3.2.1/3.ngql-guide/7.general-query-statements/3.go/" target="_blank">GO</a> 语句可以根据指定的条件遍历数据库。<code>GO</code>语句从一个或多个点开始，沿着一条或多条边遍历，返回<code>YIELD</code>子句中指定的信息。</p>
+</li>
+<li><p><a href="https://docs.nebula-graph.com.cn/3.2.1/3.ngql-guide/7.general-query-statements/4.fetch/" target="_blank">FETCH</a> 语句可以获得点或边的属性。</p>
+</li>
+<li><p><a href="https://docs.nebula-graph.com.cn/3.2.1/3.ngql-guide/7.general-query-statements/5.lookup/" target="_blank">LOOKUP</a> 语句是基于<a href="https://docs.nebula-graph.com.cn/3.2.1/2.quick-start/4.nebula-graph-crud/#_12" target="_blank">索引</a>的，和<code>WHERE</code>子句一起使用，查找符合特定条件的数据。</p>
+</li>
+<li><p><a href="https://docs.nebula-graph.com.cn/3.2.1/3.ngql-guide/7.general-query-statements/2.match/" target="_blank">MATCH</a> 语句是查询图数据最常用的，可以灵活的描述各种图模式，但是它依赖<a href="https://docs.nebula-graph.com.cn/3.2.1/2.quick-start/4.nebula-graph-crud/#_12" target="_blank">索引</a>去匹配 NebulaGraph 中的数据模型，性能也还需要调优。</p>
+</li>
+</ul>
+</li>
+<li></li>
+</ol>
+<blockquote>
+<p>🌶<strong>注意</strong></p>
+</blockquote>
+<p>无属性索引的时候，在没有指定条件的时候，可以通过数据扫描的sample下推去扫得 limit 的数据</p>
+<p>而带有<code>filter</code>条件时，需要全扫才行，这个情况在nebula里是被禁止的，需要创建这个tag上的索引才能查询</p>
+<pre><code class="lang-sql"># 在 Tag player 的 name 属性和 Edge type belong_to 上创建索引
+CREATE TAG INDEX IF NOT EXISTS name ON player(name(20));
+CREATE EDGE INDEX IF NOT EXISTS belong_to_index on belong_to();
+# 重建索引使其生效
+REBUILD EDGE INDEX name;
+REBUILD EDGE INDEX belong_to_index;
+# 开始查询
+MATCH ()&lt;-[e:belong_to]-() 
+WHERE e.industry_name=='水力发电'
+RETURN e
+LIMIT 3;
+</code></pre>
+<h2 id="图模式">3.5 图模式</h2>
+<p>模式(pattern)和图模式匹配，是图查询语言的核心功能</p>
+<blockquote>
+<p>单点模式</p>
+</blockquote>
+<pre><code class="lang-sql">(a)
+</code></pre>
+<p>示例为一个简单的模式，描述了单个点，并使用变量<code>a</code>命名该点</p>
+<blockquote>
+<p>多点关联模式</p>
+</blockquote>
+<p>多个点通过边相连是常见的结构，模式用箭头来描述两个点之间的边。例如：</p>
+<pre><code class="lang-sql">(a)-[]-&gt;(b)
+</code></pre>
+<p>示例为一个简单的数据结构：两个点和一条连接两个点的边，两个点分别为<code>a</code>和<code>b</code>，边是有方向的，从<code>a</code>到<code>b</code></p>
+<p>这种描述点和边的方式可以扩展到任意数量的点和边，例如：</p>
+<pre><code class="lang-sql">(a)-[]-&gt;(b)&lt;-[]-(c)
+</code></pre>
+<p>这样的一系列点和边称为<code>路径</code>(path)</p>
+<p>只有在涉及某个点时，才需要命名这个点。如果不涉及这个点，则可以省略名称，例如：</p>
+<pre><code class="lang-sql">(a)-[]-&gt;()&lt;-[]-(c)
+</code></pre>
+<blockquote>
+<p>Tag模式</p>
+</blockquote>
+<p>nGQL 中的<code>Tag</code>概念与 openCypher 中的<code>Label</code>有一些不同。例如，必须创建一个<code>Tag</code>之后才能使用它，而且<code>Tag</code>还定义了属性的类型</p>
+<p>模式除了简单地描述图中的点之外，还可以描述点的 Tag。例如：</p>
+<pre><code class="lang-sql">(a:User)-[]-&gt;(b)
+</code></pre>
+<p>模式也可以描述有多个 Tag 的点，例如：</p>
+<pre><code class="lang-sql">(a:User:Admin)-[]-&gt;(b)
+</code></pre>
+<blockquote>
+<p>属性模式</p>
+</blockquote>
+<p>点和边是图的基本结构。nGQL 在这两种结构上都可以增加属性，方便实现更丰富的模型。</p>
+<p>在模式中，属性的表示方式为：用花括号括起一些键值对，用英文逗号分隔。例如一个点有两个属性：</p>
+<pre><code class="lang-sql">(a {name: 'Andres', sport: 'Brazilian Ju-Jitsu'})
+</code></pre>
+<p>在这个点上可以有一条边是：</p>
+<pre><code class="lang-sql">(a)-[{blocked: false}]-&gt;(b)
+</code></pre>
+<blockquote>
+<p>边模式</p>
+</blockquote>
+<p>描述一条边最简单的方法是使用箭头连接两个点。</p>
+<p>可以用以下方式描述边以及它的方向性。如果不关心边的方向，可以省略箭头，例如：</p>
+<pre><code class="lang-sql">(a)-[]-(b)
+</code></pre>
+<p>和点一样，边也可以命名。一对方括号用于分隔箭头，变量放在两者之间。例如：</p>
+<pre><code class="lang-sql">(a)-[r]-&gt;(b)
+</code></pre>
+<p>和点上的 Tag 一样，边也可以有类型。描述边的类型，例如：</p>
+<pre><code class="lang-sql">(a)-[r:REL_TYPE]-&gt;(b)
+</code></pre>
+<p>和点上的 Tag 不同，一条边只能有一种 Edge type。但是如果我们想描述多个可选 Edge type，可以用管道符号（|）将可选值分开，例如：</p>
+<pre><code class="lang-sql">(a)-[r:TYPE1|TYPE2]-&gt;(b)
+</code></pre>
+<p>和点一样，边的名称可以省略，例如：</p>
+<pre><code class="lang-sql">(a)-[:REL_TYPE]-&gt;(b)
+</code></pre>
+<blockquote>
+<p>变长模式</p>
+</blockquote>
+<p>在图中指定边的长度来描述多条边（以及中间的点）组成的一条长路径，不需要使用多个点和边来描述。例如：</p>
+<pre><code class="lang-sql">(a)-[*2]-&gt;(b)
+</code></pre>
+<p>该模式描述了 3 点 2 边组成的图，它们都在一条路径上（长度为 2），等价于：</p>
+<pre><code class="lang-sql">(a)-[]-&gt;()-[]-&gt;(b)
+</code></pre>
+<p>也可以指定长度范围，这样的边模式称为<code>variable-length edges</code>，例如：</p>
+<pre><code class="lang-sql">(a)-[*3..5]-&gt;(b)
+</code></pre>
+<p><code>*3..5</code>表示最小长度为 3，最大长度为 5。</p>
+<p>该模式描述了 4 点 3 边、5 点 4 边或 6 点 5 边组成的图。</p>
+<p>也可以忽略最小长度，只指定最大长度，例如：</p>
+<pre><code class="lang-sql">(a)-[*..5]-&gt;(b)
+</code></pre>
+<p>必须指定最大长度，<strong>不支持</strong>仅指定最小长度（<code>(a)-[*3..]-&gt;(b)</code>）或都不指定（<code>(a)-[*]-&gt;(b)</code>）。</p>
+<blockquote>
+<p>路径变量</p>
+</blockquote>
+<p>一系列连接的点和边称为<code>路径</code>。nGQL 允许使用变量来命名路径，例如：</p>
+<pre><code class="lang-sql">p = (a)-[*3..5]-&gt;(b)
+</code></pre>
+<p>可以在 MATCH 语句中使用路径变量</p>
+<blockquote>
+<p>注释</p>
+</blockquote>
+<p>支持四种注释方式：<code>#</code>、<code>//</code>、<code>/* */</code></p>
+<p>nGQL 语句中的反斜线（\）代表换行</p>
+<blockquote>
+<p>数据类型</p>
+</blockquote>
+<p>字符串的表示方式为用双引号或单引号包裹，例如<code>"Hello, Cooper"</code>或<code>'Hello, Cooper'</code></p>
+<p>日期和时间的类型，包括<code>DATE</code>、<code>TIME</code>、<code>DATETIME</code>、<code>TIMESTAMP</code>和<code>DURATION</code></p>
+<pre><code class="lang-sql">nebula&gt; RETURN DATE({year:-123, month:12, day:3});
++------------------------------------+
+| date({year:-(123),month:12,day:3}) |
++------------------------------------+
+| -123-12-03                         |
++------------------------------------+
+nebula&gt; RETURN DATE("23333");
++---------------+
+| date("23333") |
++---------------+
+| 23333-01-01   |
++---------------+
+
+# 传入当前时间。
+nebula&gt; RETURN timestamp();
++-------------+
+| timestamp() |
++-------------+
+| 1625469277  |
++-------------+
+
+# 传入指定时间。
+nebula&gt; RETURN timestamp("2022-01-05T06:18:43");
++----------------------------------+
+| timestamp("2022-01-05T06:18:43") |
++----------------------------------+
+| 1641363523                       |
++----------------------------------+
+</code></pre>
+<p><code>date()</code>支持的属性名称包括<code>year</code>、<code>month</code>和<code>day</code>。<code>date()</code>支持输入<code>YYYY</code>、<code>YYYY-MM</code>或<code>YYYY-MM-DD</code>，未输入的月份或日期默认为<code>01</code></p>
+<p><code>time()</code>支持的属性名称包括<code>hour</code>、<code>minute</code>和<code>second</code></p>
+<p><code>datetime()</code>支持的属性名称包括<code>year</code>、<code>month</code>、<code>day</code>、<code>hour</code>、<code>minute</code>和<code>second</code></p>
+<p>列表（List）是复合数据类型，一个列表是一组元素的序列，可以通过元素在序列中的位置访问列表中的元素</p>
+<p>nGQL 的下标支持从前往后查询，从 0 开始，0 表示第一个元素，1 表示第二个元素，以此类推；也支持从后往前查询，从-1 开始，-1 表示最后一个元素，-2 表示倒数第二个元素，以此类推。</p>
+<ul>
+<li>[M]：表示下标为 M 的元素。</li>
+<li>[M..N]：表示<code>M ≤ 下标 ＜ N</code>的元素。<code>N</code>为 0 时，返回为空。</li>
+<li>[M..]：表示<code>M ≤ 下标</code>的元素。</li>
+<li>[..N]：表示<code>下标 ＜ N</code>的元素。<code>N</code>为 0 时，返回为空。</li>
+</ul>
+<h2 id="可视化">3.6 可视化</h2>
+<p>NebulaGraph Studio（简称 Studio）是一款可以通过 Web 访问的开源图数据库可视化工具，搭配 <a href="https://docs.nebula-graph.com.cn/3.2.1/" target="_blank">NebulaGraph</a> 内核使用，提供构图、数据导入、编写 nGQL 查询等一站式服务。</p>
+<blockquote>
+<p>前提条件<a href="https://docs.nebula-graph.com.cn/3.2.1/nebula-studio/deploy-connect/st-ug-deploy/#_1" target="_blank">¶</a></p>
+</blockquote>
+<p>在部署 RPM 版 Studio 之前，用户需要确认以下信息：</p>
+<ul>
+<li><p>NebulaGraph 服务已经部署并启动。详细信息，参考 <a href="https://docs.nebula-graph.com.cn/3.2.1/4.deployment-and-installation/1.resource-preparations/" target="_blank">NebulaGraph 安装部署</a></p>
+</li>
+<li><p>使用的 Linux 发行版为 CentOS ，已安装 lsof</p>
+</li>
+<li><p>确保以下端口未被占用，<code>7001</code>是Studio 提供 web 服务使用的</p>
+</li>
+</ul>
+<p>从官网下载<a href="https://oss-cdn.nebula-graph.com.cn/nebula-graph-studio/3.4.1/nebula-graph-studio-3.4.1.x86_64.rpm" target="_blank">nebula-graph-studio-3.4.1.x86_64.rpm</a>，使用以下命令安装到指定路径</p>
+<pre><code class="lang-sh">sudo rpm -i nebula-graph-studio-3.4.1.x86_64.rpm --prefix=&lt;path&gt;
+</code></pre>
+<p>安装完，自动会启动，当屏幕返回以下信息时，表示 PRM 版 Studio 已经成功启动。</p>
+<pre><code class="lang-sh">Start installing NebulaGraph Studio now...
+NebulaGraph Studio has been installed.
+NebulaGraph Studio started automatically.
+</code></pre>
+<p>启动成功后，在浏览器地址栏输入 <code>http://&lt;ip address&gt;:7001</code></p>
+<p><strong>注意</strong>: host处填写为 <code>ip:port</code>格式</p>
+<p>用户名和密码：根据 Nebula Graph 的身份验证设置填写登录账号和密码</p>
+<ul>
+<li>如果未启用身份验证，可以填写默认用户名 <code>root</code> 和任意密码。</li>
+<li>如果已启用身份验证，但是未创建账号信息，用户只能以 GOD 角色登录，必须填写 <code>root</code> 及对应的密码 <code>nebula</code>。</li>
+<li>如果已启用身份验证，同时又创建了不同的用户并分配了角色，不同角色的用户使用自己的账号和密码登录。</li>
+</ul>
+<p>如果在浏览器窗口中能看到以下登录界面，表示已经成功部署并启动 Studio</p>
+<blockquote>
+<p>异常处理<a href="https://docs.nebula-graph.com.cn/3.2.1/nebula-studio/deploy-connect/st-ug-deploy/#_4" target="_blank">¶</a></p>
+</blockquote>
+<p>如果在安装过程中自动启动失败或是需要手动启动或停止服务，请使用以下命令：</p>
+<ul>
+<li><p>手动启动服务</p>
+<pre><code class="lang-sh">bash /usr/<span class="hljs-built_in">local</span>/nebula-graph-studio/scripts/rpm/start.sh
+</code></pre>
+</li>
+<li><p>手动停止服务</p>
+<pre><code class="lang-sh">bash /usr/<span class="hljs-built_in">local</span>/nebula-graph-studio/scripts/rpm/stop.sh
+</code></pre>
+</li>
+</ul>
+<p>如果启动服务时遇到报错报错 <code>ERROR: bind EADDRINUSE 0.0.0.0:7001</code>，用户可以通过以下命令查看端口 7001 是否被占用。</p>
+<pre><code class="lang-sh">lsof -i:7001
+</code></pre>
+<p>如果端口被占用，且无法结束该端口上进程，用户可以通过以下命令修改 Studio 服务启动端口，并重新启动服务。</p>
+<pre><code class="lang-sh">//修改 studio 服务启动端口
+vi etc/studio-api.yam
+//修改
+Port: 7001 // 修改这个端口号，改成任意一个当前可用的即可
+//重启服务
+systemctl restart nebula-graph-studio.service
+</code></pre>
+<h2 id="集群监控">3.7 集群监控</h2>
+<p><a href="https://docs.nebula-graph.com.cn/3.2.1/nebula-dashboard/1.what-is-dashboard/" target="_blank"><code>NebulaGraph Dashboard</code></a>(简称Dashboard)是一款用于监控NebulaGraph集群中机器和服务状态的可视化工具</p>
+<h2 id="数据导入">3.8 数据导入</h2>
+<blockquote>
+<p><a href="https://baijiahao.baidu.com/s?id=1737412299821419025&amp;wfr=spider&amp;for=pc" target="_blank">Nebula Importer 数据导入实践</a></p>
+</blockquote>
+<p>Nebula 目前作为较为成熟的产品，已经有着很丰富的生态。数据导入的维度而言就已经提供了多种选择。有大而全的Nebula Exchange，小而精简的Nebula Importer, 还有为 Spark / Flink 引擎提供的Nebula Spark Connector 和 Nebula Flink Connector。</p>
+<p>使用场景介绍：</p>
+<ul>
+<li><p>Nebula Exchange</p>
+</li>
+<li><ul>
+<li>需要将来自 Kafka、Pulsar 平台的流式数据, 导入 Nebula Graph 数据库</li>
+<li>需要从关系型数据库（如 MySQL）或者分布式文件系统（如 HDFS）中读取批式数据</li>
+<li>需要将大批量数据生成 Nebula Graph 能识别的 SST 文件</li>
+</ul>
+</li>
+<li><p>Nebula Importer</p>
+</li>
+<li><ul>
+<li>Importer 适用于将本地 CSV 文件的内容导入至 Nebula Graph 中</li>
+</ul>
+</li>
+<li><p>Nebula Spark Connector:</p>
+</li>
+<li><ul>
+<li>在不同的 Nebula Graph 集群之间迁移数据</li>
+<li>在同一个 Nebula Graph 集群内不同图空间之间迁移数据</li>
+<li>Nebula Graph 与其他数据源之间迁移数据</li>
+<li>结合 Nebula Algorithm 进行图计算</li>
+</ul>
+</li>
+<li><p>Nebula Flink Connector</p>
+</li>
+<li><ul>
+<li>在不同的 Nebula Graph 集群之间迁移数据</li>
+<li>在同一个 Nebula Graph 集群内不同图空间之间迁移数据</li>
+<li>Nebula Graph 与其他数据源之间迁移数据</li>
+</ul>
+</li>
+</ul>
+<p>总体来说，Exchange 大而全，可以和大部分的存储引擎结合，导入到 Nebula 中，但是需要部署Spark 环境。</p>
+<p>Importer 使用简单，所需依赖较少，但需要自己提前生成数据文件，配置好 schema 一劳永逸，但是不支持断点续传，适合数据量中等。</p>
+<p>Spark / Flink Connector 需要和流数据结合。</p>
+<p>不同的场景选择不同的工具，如果作为新人使用 Nebula 在导入数据时，建议使用 Nebula Importer 工具，简单快速上手。</p>
+<h1 id="k8s">4 k8s</h1>
+<blockquote>
+<p><a href="https://kubernetes.io/zh-cn/docs/concepts/workloads/pods/" target="_blank">k8s官网中文文档</a></p>
+<p><a href="https://k8s.easydoc.net" target="_blank">Kubernetes（K8S）教程</a></p>
+<p><a href="https://www.cnblogs.com/cjsblog/p/12050618.html" target="_blank">Kubernetes Clusters-狂乱的贵公子</a></p>
+</blockquote>
+<h2 id="简介">4.1 简介</h2>
+<blockquote>
+<p>Kubernetes (K8S) 是什么</p>
+</blockquote>
+<p>它是一个为 <strong>容器化</strong> 应用提供集群部署和管理的开源工具，由 Google 开发</p>
+<p><strong>Kubernetes</strong> 这个名字源于希腊语，意为“舵手”或“飞行员”。k8s 这个缩写是因为 k 和 s 之间有八个字符的关系。 Google 在 2014 年开源了 Kubernetes 项目</p>
+<p><strong>主要特性：</strong></p>
+<ul>
+<li>高可用，不宕机，自动灾难恢复</li>
+<li>灰度更新，不影响业务正常运转</li>
+<li>一键回滚到历史版本</li>
+<li>方便的伸缩扩展（应用伸缩，机器加减）、提供负载均衡</li>
+<li>有一个完善的生态</li>
+</ul>
+<blockquote>
+<p>部署方案</p>
+</blockquote>
+<ul>
+<li>传统部署方式：</li>
+</ul>
+<p>应用直接在物理机上部署，机器资源分配不好控制，出现Bug时，可能机器的大部分资源被某个应用占用，导致其他应用无法正常运行，无法做到应用隔离</p>
+<ul>
+<li>虚拟机部署</li>
+</ul>
+<p>在单个物理机上运行多个虚拟机，每个虚拟机都是完整独立的系统，性能损耗大</p>
+<ul>
+<li>容器部署</li>
+</ul>
+<p>所有容器共享主机的系统，轻量级的虚拟机，性能损耗小，资源隔离，CPU和内存可按需分配</p>
+<p><a data-lightbox="32da621f-ced4-44df-a17e-8c04e9b73eaf" data-title="k8s和虚拟机比较" href="https://pic.hycbook.com/i/hexo/bk_resources/common/6.docker使用/k8s和虚拟机比较.webp" target="_blank"><img alt="k8s和虚拟机比较" src="https://pic.hycbook.com/i/hexo/bk_resources/common/6.docker使用/k8s和虚拟机比较.webp"/></a></p>
+<p>Kubernetes 可以为你提供集中式的管理集群机器和应用，加机器、版本升级、版本回滚，那都是一个命令就搞定的事，不停机的灰度更新，确保高可用、高性能、高扩展</p>
+<blockquote>
+<p>重要概念 Pod</p>
+</blockquote>
+<p>豆荚，K8S 调度、管理的最小单位，一个 Pod 可以包含一个或多个容器，每个 Pod 有自己的虚拟IP。一个工作节点可以有多个 pod，主节点会考量负载自动调度 pod 到哪个节点运行</p>
+<p><a data-lightbox="14f555bf-1e57-4d68-b740-cd99e74df40c" data-title="pod概念" href="https://pic.hycbook.com/i/hexo/bk_resources/common/6.docker使用/pod概念.webp" target="_blank"><img alt="pod概念" src="https://pic.hycbook.com/i/hexo/bk_resources/common/6.docker使用/pod概念.webp"/></a></p>
+<blockquote>
+<p>Kubernetes 组件</p>
+</blockquote>
+<p>Kubernetes 是一个开源的容器编排和管理平台，由多个组件组成。下面是 Kubernetes 的一些核心组件：</p>
+<ol>
+<li>kube-apiserver：作为 Kubernetes API 的前端组件，处理来自用户、kubectl 命令行工具以及其他组件的 API 请求，并将其存储在 etcd 中</li>
+<li>etcd：是一个高度可用且一致性的分布式键值存储，用于保存 Kubernetes 集群的配置数据、元数据和状态信息</li>
+<li>kube-scheduler：负责监视新创建的 Pod，并根据可用的计算资源、硬件和软件要求选择合适的节点进行调度</li>
+<li>kube-controller-manager：包含多个控制器，用于管理集群中的各种资源，例如节点控制器、副本控制器、服务控制器等。它负责保持期望状态和实际状态之间的一致性</li>
+<li>kubelet：在每个节点上运行的代理组件，负责管理节点上的容器，与容器运行时进行交互，接收来自 kube-apiserver 的指令，并确保容器按照期望状态运行</li>
+<li>kube-proxy：负责为 Service 对象提供网络代理和负载均衡功能，将网络流量路由到正确的容器上</li>
+<li>Container Runtime：Kubernetes 支持多种容器运行时，如 Docker、containerd、CRI-O 等，用于创建和管理容器</li>
+<li>kube-dns/coredns：提供集群内 DNS 服务，用于解析 Kubernetes 集群中的服务名称</li>
+<li>Dashboard：提供可视化的 Kubernetes 集群管理界面，用于查看和操作集群中的资源</li>
+</ol>
+<p>除了这些核心组件之外，还有其他的辅助组件和插件，如Ingress Controller（用于管理入口流量）、Heapster（用于集群监控和性能分析）、Prometheus（用于指标收集和监控）、Fluentd（用于日志收集和聚合）等，这些组件可以根据具体需求选择安装和配置</p>
+<p><a data-lightbox="50072bab-9684-4ebe-a688-cdc331a768b9" data-title="k8s集群" href="https://pic.hycbook.com/i/hexo/bk_resources/common/6.docker使用/k8s集群.webp" target="_blank"><img alt="k8s集群" src="https://pic.hycbook.com/i/hexo/bk_resources/common/6.docker使用/k8s集群.webp"/></a></p>
+<h2 id="安装和部署">4.2 安装和部署</h2>
+<p>占位...</p>
+<p></p><footer class="page-footer"><span class="copyright">Copyright © narutohyc.com 2021 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
+2023-08-14 07:23:22
+</span></footer><hr/><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'evyLlP61gQN3G3OM2GQq1rzH-gzGzoHsz',appKey: 'utUrzoiqNaDEGlgr09JL1pXB',placeholder: '欢迎留下评论交流~',avatar: 'wavatar',meta: undefined,pageSize: 15,lang: 'zh-CN',recordIP: false})</script><p></p>
+</section>
+</div>
+<div class="search-results">
+<div class="has-results">
+<h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Previous page: alicloud_deployment" class="navigation navigation-prev" href="1.alicloud_deployment.html">
+<i class="fa fa-angle-left"></i>
+</a>
+<a aria-label="Next page: elementary_os记录" class="navigation navigation-next" href="9.elementary_os记录.html">
+<i class="fa fa-angle-right"></i>
+</a>
+<script src="https://cdn.jsdelivr.net/gh/zztongtong/CDN/js/live2d.min.js"></script><div style="position:absolute; bottom:0; left:0; width:200;"><canvas height="350" id="model_1" width="200"></canvas></div></div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"docker使用","date":"2022/10/9 13:17:57","top_img":"https://pic.hycbook.com/i/hexo/post_imgs/蕾姆5.webp","cover":"https://pic.hycbook.com/i/hexo/post_cover/蕾姆5.webp","categories":["common"],"tags":["docker","neo4j","图数据库"],"abbrlink":50622,"level":"1.5","depth":1,"next":{"title":"elementary_os记录","level":"1.6","depth":1,"path":"chapters/9.elementary_os记录.md","ref":"chapters/9.elementary_os记录.md","articles":[]},"previous":{"title":"alicloud_deployment","level":"1.4","depth":1,"path":"chapters/1.alicloud_deployment.md","ref":"chapters/1.alicloud_deployment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","mathjax","mermaid-gb3","tbfed-pagefooter","code","search-plus","-lunr","-search","lightbox","theme-comscore","valine","pageview-count","favicon-absolute","copyright-v"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © narutohyc.com 2021","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/narutohyc"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://s2.loli.net/2022/03/23/dEYjkaSGXwe7rnu.png","alipayText":"alipay打赏","button":"欢迎打赏","title":"","wechat":"https://s2.loli.net/2022/03/23/WDiTVSamQBJdEA4.png","wechatText":"wechat打赏"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"./chapters/res/other/favicon.ico","appleTouchIconPrecomposedMore":{},"favicon":"./chapters/res/other/favicon.ico"},"copyright-v":{"copyProtect":true,"enableFooter":false,"site":"https://hycbook.github.io/bk_python/","author":"narutohyc","website":"python元知识驿站","image":"https://s2.loli.net/2022/03/24/pbMd1BCgUNzi7mG.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"narutohyc","repo":"bk_python","type":"star","size":"small","count":true}]},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"valine":{"avatar":"wavatar","lang":"zh-CN","pageSize":15,"placeholder":"欢迎留下评论交流~","recordIP":false,"appId":"evyLlP61gQN3G3OM2GQq1rzH-gzGzoHsz","appKey":"utUrzoiqNaDEGlgr09JL1pXB"},"search-plus":{}},"theme":"default","author":"narutohyc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python相关学习记录","language":"zh-hans","links":{"sidebar":{"书籍主页":"https://hycbook.github.io/bk_index/"}},"gitbook":"*","description":"记录 Python 的学习和一些技巧的使用"},"file":{"path":"chapters/6.docker使用.md","mtime":"2023-08-14T07:23:22.581Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-14T07:24:23.700Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+<canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script></div>
+<script src="../gitbook/gitbook.js"></script>
+<script src="../gitbook/theme.js"></script>
+<script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+<script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+<script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+<script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+<script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+<script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+<script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-copyright-v/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+</body>
+</html>

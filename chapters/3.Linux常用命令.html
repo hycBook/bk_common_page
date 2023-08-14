@@ -1,0 +1,669 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Linux常用命令 · Python相关学习记录</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="GitBook 3.2.3" name="generator"/>
+<meta content="narutohyc" name="author"/>
+<link href="../gitbook/style.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-splitter/splitter.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-anchors/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-donate/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-code/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-search-plus/search.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-pageview-count/plugin.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-highlight/website.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-fontsettings/website.css" rel="stylesheet"/>
+<link href="../gitbook/gitbook-plugin-theme-comscore/test.css" rel="stylesheet"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<link href="../gitbook/images/apple-touch-icon-precomposed-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../gitbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="1.alicloud_deployment.html" rel="next"/>
+<link href="8.Kafka基本安装和使用.html" rel="prev"/>
+<link href="./chapters/res/other/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="./chapters/res/other/favicon.ico" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+<script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"narutohyc","repo":"bk_python","type":"star","size":"small","count":true}]};
+    </script>
+</head>
+<body>
+          <div class="mountain_a"></div>
+          <div class="mountain_b"></div>
+          <div class="house right">
+            <div class="fence"></div>
+            <div class="wall"></div>
+            <div class="roof left"></div>
+            <div class="roof right"></div>
+            <div class="door"></div>
+          </div>
+          <div class="house left">
+            <div class="fence"></div>
+            <div class="wall"></div>
+            <div class="roof left"></div>
+            <div class="roof right"></div>
+            <div class="door"></div>
+          </div>
+          <div class="tree_back"></div>
+          <div class="tree"></div>
+          <div class="postbox_a">
+            <div class="hole"></div>
+          </div>
+          <div class="postbox_b">
+            <div class="hole"></div>
+          </div>
+          <div class="windmill">
+            <div class="tower"></div>
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="blade">
+              <div class="windblade"></div>
+              <div class="windblade windblade2"></div>
+              <div class="windblade windblade3"></div>
+              <div class="windblade windblade4"></div>
+            </div>
+          </div>
+          <div class="allsnows">
+            <div class="snow1"></div>
+            <div class="snow2"></div>
+            <div class="snow3"></div>
+            <div class="snow4"></div>
+            <div class="snow5"></div>
+            <div class="snow6"></div>
+            <div class="snow7"></div>
+            <div class="snow8"></div>
+            <div class="snow9"></div>
+            <div class="snow10"></div>
+            <div class="snow11"></div>
+            <div class="snow12"></div>
+            <div class="snow13"></div>
+            <div class="snow14"></div>
+            <div class="snow15"></div>
+            <div class="snow16"></div>
+            <div class="snow17"></div>
+            <div class="snow18"></div>
+            <div class="snow19"></div>
+            <div class="snow20"></div>
+          </div>
+          <div class="ground">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="ice">
+              <div class="glare"></div>
+              <div class="ice_shadow"></div>
+            </div>
+
+          </div>
+    
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input placeholder="输入并搜索" type="text"/>
+</div>
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a class="custom-link" href="https://hycbook.github.io/bk_index/" target="_blank">书籍主页</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-level="1.1" data-path="../" id="chapter_id_0">
+<a href="../">
+<b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.2" data-path="8.Kafka基本安装和使用.html" id="chapter_id_1">
+<a href="8.Kafka基本安装和使用.html">
+<b>1.2.</b>
+                    
+                    Kafka基本安装和使用
+            
+                </a>
+</li>
+<li class="chapter active" data-level="1.3" data-path="3.Linux常用命令.html" id="chapter_id_2">
+<a href="3.Linux常用命令.html">
+<b>1.3.</b>
+                    
+                    Linux常用命令
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.4" data-path="1.alicloud_deployment.html" id="chapter_id_3">
+<a href="1.alicloud_deployment.html">
+<b>1.4.</b>
+                    
+                    alicloud_deployment
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.5" data-path="6.docker使用.html" id="chapter_id_4">
+<a href="6.docker使用.html">
+<b>1.5.</b>
+                    
+                    docker使用
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.6" data-path="9.elementary_os记录.html" id="chapter_id_5">
+<a href="9.elementary_os记录.html">
+<b>1.6.</b>
+                    
+                    elementary_os记录
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.7" data-path="5.gitbook博客搭建.html" id="chapter_id_6">
+<a href="5.gitbook博客搭建.html">
+<b>1.7.</b>
+                    
+                    gitbook博客搭建
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.8" data-path="4.github协作.html" id="chapter_id_7">
+<a href="4.github协作.html">
+<b>1.8.</b>
+                    
+                    github协作
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.9" data-path="7.md数学公式和emoji表情.html" id="chapter_id_8">
+<a href="7.md数学公式和emoji表情.html">
+<b>1.9.</b>
+                    
+                    md数学公式和emoji表情
+            
+                </a>
+</li>
+<li class="chapter" data-level="1.10" data-path="2.reinstall_the_system.html" id="chapter_id_9">
+<a href="2.reinstall_the_system.html">
+<b>1.10.</b>
+                    
+                    reinstall_the_system
+            
+                </a>
+</li>
+<li class="divider"></li>
+<li>
+<a class="gitbook-link" href="https://www.gitbook.com" target="blank">
+            本书使用 GitBook 发布
+        </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="..">Linux常用命令</a>
+</h1>
+</div>
+<div class="page-wrapper" role="main" tabindex="-1">
+<div class="page-inner">
+<div class="search-plus" id="book-search-results">
+<div class="search-noresults">
+<section class="normal markdown-section">
+<div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon"></span><a href="#linux常用指令">1 linux常用指令</a></li><ul><li><span class="title-icon"></span><a href="#文件类">1.1 文件类</a></li><li><span class="title-icon"></span><a href="#磁盘类">1.2 磁盘类</a></li><li><span class="title-icon"></span><a href="#防火墙">1.3 防火墙</a></li><ul><li><span class="title-icon"></span><a href="#端口类">1.3.1 端口类</a></li><li><span class="title-icon"></span><a href="#win端口">1.3.2 win端口</a></li></ul><li><span class="title-icon"></span><a href="#进程类">1.4 进程类</a></li><ul><li><span class="title-icon"></span><a href="#批量杀死进程">1.4.1 批量杀死进程</a></li></ul><li><span class="title-icon"></span><a href="#解压缩">1.5 解压缩</a></li><li><span class="title-icon"></span><a href="#日期时间">1.6 日期时间</a></li><li><span class="title-icon"></span><a href="#环境变量">1.7 环境变量</a></li><li><span class="title-icon"></span><a href="#后台执行">1.8 后台执行</a></li><li><span class="title-icon"></span><a href="#svn基本使用">1.9 svn基本使用</a></li></ul><li><span class="title-icon"></span><a href="#系统级">2 系统级</a></li><li><span class="title-icon"></span><a href="#代理配置">3 代理配置</a></li><li><span class="title-icon"></span><a href="#包管理">4 包管理</a></li></ul></div><a href="#linux常用指令" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><hr/>
+<h1 id="linux常用指令">1 linux常用指令</h1>
+<blockquote>
+<p><a href="http://www.linuxso.com/command/" target="_blank">linux指令入门</a></p>
+</blockquote>
+<h2 id="文件类">1.1 文件类</h2>
+<blockquote>
+<p>远程拷贝文件(-P 是指定端口，-r 是循环复制)</p>
+</blockquote>
+<pre><code class="lang-cmd">scp -P port -r root@<span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">2</span>.<span class="hljs-number">1</span>:/home/hyc/test /home/hyc/
+</code></pre>
+<blockquote>
+<p>文件权限</p>
+<p>删除文件</p>
+<p>删除文件夹</p>
+<p>移动或更名</p>
+<p>查找搜索: 寻找特定档案：find、locate、whereis</p>
+</blockquote>
+<p>按照文件名搜索</p>
+<pre><code class="lang-cmd"># 语法: <span class="hljs-built_in">find</span> 搜索路径 [选项] 搜索内容
+<span class="hljs-built_in">find</span> / -name label_studio.sqlite3
+</code></pre>
+<p>选项：</p>
+<ul>
+<li>-name: 按照文件名搜索</li>
+<li>-iname: 按照文件名搜索，不区分文件名大小</li>
+<li>-inum: 按照 inode 号搜索</li>
+</ul>
+<p>按照文件类型搜索</p>
+<pre><code class="lang-cmd"># 语法: <span class="hljs-built_in">find</span> 搜索路径 [选项] 搜索内容
+<span class="hljs-built_in">find</span> /home -<span class="hljs-built_in">type</span> d -name huangyc
+</code></pre>
+<p>选项:</p>
+<ul>
+<li>-type d：查找目录</li>
+<li>-type f：查找普通文件</li>
+<li>-type l：查找软链接文件</li>
+</ul>
+<p>寻找【执行挡】：which</p>
+<blockquote>
+<p>查看文件夹及子目录下文件数量</p>
+</blockquote>
+<pre><code class="lang-cmd">[root@uslave02 datasets]# ls -lR /home/hyc/ | grep -E ".jpg|.png|.jpeg|.jpe" |wc -l
+<span class="hljs-number">6599</span>
+</code></pre>
+<h2 id="磁盘类">1.2 磁盘类</h2>
+<blockquote>
+<p>查看某个文件或目录占用磁盘空间的大小(需要进入到当前目录)</p>
+</blockquote>
+<pre><code class="lang-sh">du -ah --max-depth=1
+</code></pre>
+<blockquote>
+<p>查看全局文件系统磁盘占用</p>
+</blockquote>
+<pre><code class="lang-sh">df -h
+</code></pre>
+<blockquote>
+<p>查看当前路径下 各文件夹的磁盘占用</p>
+</blockquote>
+<pre><code class="lang-sh">du -sh *
+</code></pre>
+<h2 id="防火墙">1.3 防火墙</h2>
+<h3 id="端口类">1.3.1 端口类</h3>
+<blockquote>
+<p>防火墙</p>
+</blockquote>
+<pre><code class="lang-sh"><span class="hljs-comment"># 重启防火墙</span>
+firewall-cmd --reload
+
+<span class="hljs-comment"># 关闭端口（关闭后需要要重启防火墙才生效）</span>
+firewall-cmd --zone=public --remove-port=3338/tcp --permanent
+
+<span class="hljs-comment"># 开机启动防火墙</span>
+systemctl <span class="hljs-built_in">enable</span> firewalld
+
+<span class="hljs-comment"># 开启防火墙</span>
+systemctl start firewalld
+
+<span class="hljs-comment"># 查看防火墙状态</span>
+firewall-cmd --state
+
+<span class="hljs-comment"># 禁止防火墙开机启动</span>
+systemctl <span class="hljs-built_in">disable</span> firewalld
+
+<span class="hljs-comment"># 停止防火墙</span>
+systemctl stop firewalld
+</code></pre>
+<blockquote>
+<p>查看端口占用</p>
+</blockquote>
+<pre><code class="lang-sh"><span class="hljs-comment"># 查看已开放的端口</span>
+firewall-cmd --list-ports
+
+<span class="hljs-comment"># 或</span>
+<span class="hljs-comment"># yum install net-tools</span>
+netstat -atunlp
+</code></pre>
+<p><a data-lightbox="c37b8efb-1179-4dc7-b4c0-a76b56ea625c" data-title="img" href="https://pic.hycbook.com/i/hexo/bk_resources/common/3.Linux常用命令/image-20200328210123194.webp" target="_blank"><img alt="img" src="https://pic.hycbook.com/i/hexo/bk_resources/common/3.Linux常用命令/image-20200328210123194.webp"/></a></p>
+<blockquote>
+<p>开启端口</p>
+</blockquote>
+<pre><code class="lang-sh"><span class="hljs-comment"># 开放端口（开放后需要要重启防火墙才生效）</span>
+firewall-cmd --zone=public --add-port=3338/tcp --permanent
+<span class="hljs-comment"># 配置立即生效</span>
+firewall-cmd --reload
+</code></pre>
+<h3 id="win端口">1.3.2 win端口</h3>
+<blockquote>
+<p>拓展下windows下的端口查找和kill操作</p>
+</blockquote>
+<pre><code class="lang-cmd"><span class="hljs-function">C:\<span class="hljs-title">Users</span>\<span class="hljs-title">Administrator</span>&gt;<span class="hljs-title">netstat</span> -<span class="hljs-title">aon</span> | <span class="hljs-title">findstr</span> "4000"
+  <span class="hljs-title">TCP</span>    0.0.0.0:4000           0.0.0.0:0              <span class="hljs-title">LISTENING</span>       12128
+  <span class="hljs-title">TCP</span>    127.0.0.1:4000         127.0.0.1:57174        <span class="hljs-title">TIME_WAIT</span>       0
+  <span class="hljs-title">TCP</span>    127.0.0.1:4000         127.0.0.1:57175        <span class="hljs-title">TIME_WAIT</span>       0
+  <span class="hljs-title">TCP</span>    [::]:4000              [::]:0                 <span class="hljs-title">LISTENING</span>       12128
+
+<span class="hljs-title">C</span>:\<span class="hljs-title">Users</span>\<span class="hljs-title">Administrator</span>&gt;<span class="hljs-title">tasklist</span>|<span class="hljs-title">findstr</span> "12128"
+<span class="hljs-title">node.exe</span>                     12128 <span class="hljs-title">Console</span>                    3    141,152 <span class="hljs-title">K</span>
+
+<span class="hljs-title">C</span>:\<span class="hljs-title">Users</span>\<span class="hljs-title">Administrator</span>&gt;<span class="hljs-title">taskkill</span> /<span class="hljs-title">T</span> /<span class="hljs-title">F</span> /<span class="hljs-title">PID</span> 12128
+成功: 已终止 <span class="hljs-title">PID</span> 12128 (属于 <span class="hljs-title">PID</span> 24224 子进程)的进程。
+</span></code></pre>
+<h2 id="进程类">1.4 进程类</h2>
+<blockquote>
+<p><code>杀死指定进程</code></p>
+</blockquote>
+<p><a data-lightbox="9e57bbad-a7ed-43de-9e76-7e0086c53ce3" data-title="img" href="https://pic.hycbook.com/i/hexo/bk_resources/common/3.Linux常用命令/image-20200328210327497.webp" target="_blank"><img alt="img" src="https://pic.hycbook.com/i/hexo/bk_resources/common/3.Linux常用命令/image-20200328210327497.webp"/></a></p>
+<h3 id="批量杀死进程">1.4.1 批量杀死进程</h3>
+<blockquote>
+<p>查看进程号</p>
+</blockquote>
+<pre><code class="lang-shell">[root@iZ2zeh6nc313zs4azjijjnZ ~]# ps -ef | grep gitbook | grep -v grep|awk '{print $2}'
+24064
+29387
+30425
+</code></pre>
+<blockquote>
+<p>方式一：batch_shell</p>
+</blockquote>
+<pre><code class="lang-shell">#!/bin/sh
+dsp_admin_id=`ps -ef | grep gitbook | grep -v grep|awk '{print $2}'`
+echo $dsp_admin_id
+for id in $dsp_admin_id
+do
+    kill -9 $id  
+    echo "killed $id" 
+done
+</code></pre>
+<blockquote>
+<p>方式二：单行执行</p>
+</blockquote>
+<pre><code class="lang-shell">#!/bin/sh
+ps -ef | grep gitbook | grep -v grep|grep 4000|  awk '{print $2}' | xargs kill -9
+</code></pre>
+<h2 id="解压缩">1.5 解压缩</h2>
+<blockquote>
+<p>压缩</p>
+</blockquote>
+<pre><code class="lang-sh">tar -cvf jpg.tar *.jpg //将目录里所有jpg文件打包成jpg.tar
+tar -czf jpg.tar.gz *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩
+
+rar a jpg.rar *.jpg //rar格式的压缩，需要先下载rar <span class="hljs-keyword">for</span> linux
+
+zip jpg.zip *.jpg //zip格式的压缩，需要先下载zip <span class="hljs-keyword">for</span> linux
+</code></pre>
+<blockquote>
+<p>解压缩</p>
+</blockquote>
+<pre><code class="lang-sh">tar -xvf file.tar -C DestPath 1.txt //解压 tar包  1.txt表示只需要解压出这个文件,默认解压所有
+tar -xzvf file.tar.gz //解压tar.gz
+tar -xjvf file.tar.bz2 //解压 tar.bz2
+tar -xZvf file.tar.Z //解压tar.Z
+
+unrar e file.rar DestPath //解压rar
+
+unzip file.zip //解压zip
+</code></pre>
+<h2 id="日期时间">1.6 日期时间</h2>
+<blockquote>
+<p>显示日期</p>
+</blockquote>
+<pre><code class="lang-cmd">[root@iZ2zeh6nc313zs4azjijjnZ ~]# <span class="hljs-built_in">date</span>
+<span class="hljs-number">2022</span>年 <span class="hljs-number">03</span>月 <span class="hljs-number">12</span>日 星期六 <span class="hljs-number">10</span>:<span class="hljs-number">57</span>:<span class="hljs-number">52</span> CST
+</code></pre>
+<blockquote>
+<p>显示日历</p>
+</blockquote>
+<pre><code class="lang-cmd">[root@iZ2zeh6nc313zs4azjijjnZ ~]# cal
+      三月 <span class="hljs-number">2022</span>     
+日 一 二 三 四 五 六
+       <span class="hljs-number">1</span>  <span class="hljs-number">2</span>  <span class="hljs-number">3</span>  <span class="hljs-number">4</span>  <span class="hljs-number">5</span>
+ <span class="hljs-number">6</span>  <span class="hljs-number">7</span>  <span class="hljs-number">8</span>  <span class="hljs-number">9</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">12</span>
+<span class="hljs-number">13</span> <span class="hljs-number">14</span> <span class="hljs-number">15</span> <span class="hljs-number">16</span> <span class="hljs-number">17</span> <span class="hljs-number">18</span> <span class="hljs-number">19</span>
+<span class="hljs-number">20</span> <span class="hljs-number">21</span> <span class="hljs-number">22</span> <span class="hljs-number">23</span> <span class="hljs-number">24</span> <span class="hljs-number">25</span> <span class="hljs-number">26</span>
+<span class="hljs-number">27</span> <span class="hljs-number">28</span> <span class="hljs-number">29</span> <span class="hljs-number">30</span> <span class="hljs-number">31</span>
+</code></pre>
+<h2 id="环境变量">1.7 环境变量</h2>
+<p>在CentOS操作系统中，您可以使用几种方式来设置环境变量。以下是其中一些常见的方法：</p>
+<blockquote>
+<p>/etc/profile文件</p>
+</blockquote>
+<p>通过/etc/profile文件：在CentOS中，可以编辑<code>/etc/profile</code>文件来设置系统范围的环境变量。打开该文件并在文件末尾添加您想要设置的环境变量，例如：</p>
+<pre><code class="lang-cmd">export MY_VARIABLE=/<span class="hljs-built_in">path</span>/to/my/directory
+</code></pre>
+<p>保存文件后，重新登录或运行<code>source /etc/profile</code>以使更改生效</p>
+<blockquote>
+<p>~/.bash_profile或~/.bashrc</p>
+</blockquote>
+<p>通过~/.bash_profile或~/.bashrc文件：每个用户可以在其主目录中的<code>.bash_profile</code>或<code>.bashrc</code>文件中设置个人环境变量。这些文件会在用户登录时自动加载。打开其中一个文件，并在文件末尾添加类似的行：</p>
+<pre><code class="lang-cmd">export MY_VARIABLE=/<span class="hljs-built_in">path</span>/to/my/directory
+</code></pre>
+<p>保存文件后，注销并重新登录，或者使用命令<code>source ~/.bash_profile</code>（或<code>source ~/.bashrc</code>）来加载更改</p>
+<blockquote>
+<p>/etc/environment文件</p>
+</blockquote>
+<p>通过/etc/environment文件：可以编辑<code>/etc/environment</code>文件来设置系统范围的全局环境变量。该文件包含逐行的"key=value"对。例如：</p>
+<pre><code class="lang-cmd">MY_VARIABLE=/<span class="hljs-built_in">path</span>/to/my/directory
+</code></pre>
+<p>保存文件后，重新登录或重启系统以使更改生效</p>
+<blockquote>
+<p>命令行临时设置</p>
+</blockquote>
+<p>可以在命令行中临时设置环境变量，仅对当前会话有效。使用以下语法：</p>
+<pre><code class="lang-cmd">export MY_VARIABLE=/<span class="hljs-built_in">path</span>/to/my/directory
+</code></pre>
+<p>这将在当前会话中设置环境变量，但在注销或重新启动后不会保留</p>
+<p>请注意，设置环境变量后，您可能需要重新启动相关应用程序或终端窗口，以便它们能够读取新的环境变量值</p>
+<h2 id="后台执行">1.8 后台执行</h2>
+<blockquote>
+<p><a href="https://blog.csdn.net/longzhoufeng/article/details/108958091" target="_blank">cloudreve私有云盘配置后台运行</a></p>
+<p>systemctl方式</p>
+</blockquote>
+<pre><code class="lang-cmd">vi /usr/lib/systemd/system/cloudreve.service
+
+# 输入以下内容，注意最好别带中文
+[Unit]
+Description=Cloudreve
+Documentation=https://docs.cloudreve.org
+After=network.target
+Wants=network.target
+
+[Service]
+<span class="hljs-built_in">Type</span>=simple
+WorkingDirectory=/home/software/cloudreve
+ExecStart=/home/software/cloudreve/cloudreve
+Restart=on-abnormal
+RestartSec=<span class="hljs-number">5</span>s
+KillMode=mixed
+
+StandardOutput=null
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>更新重启服务</p>
+<pre><code class="lang-cmd"># 更新配置
+systemctl daemon-reload
+
+# 启动服务
+systemctl <span class="hljs-built_in">start</span> cloudreve
+
+# 设置开机启动
+systemctl enable cloudreve
+</code></pre>
+<p>管理命令</p>
+<pre><code class="lang-cmd"># 启动服务
+systemctl <span class="hljs-built_in">start</span> cloudreve
+
+# 停止服务
+systemctl stop cloudreve
+
+# 重启服务
+systemctl restart cloudreve
+
+# 查看状态
+systemctl status cloudreve
+</code></pre>
+<blockquote>
+<p>nohup方式</p>
+</blockquote>
+<pre><code class="lang-cmd">nohup python run.pt &gt; log.log &amp;
+</code></pre>
+<h2 id="svn基本使用">1.9 svn基本使用</h2>
+<blockquote>
+<p>centos安装svn客户端</p>
+</blockquote>
+<pre><code class="lang-bash"><span class="hljs-comment"># 安装svn客户端</span>
+yum install mod_dav_svn
+
+<span class="hljs-comment"># 查看当前svn的版本</span>
+svnserve --version
+</code></pre>
+<blockquote>
+<p>拉取项目(已存在)</p>
+</blockquote>
+<pre><code class="lang-bash">svn checkout svn://10.10.13.13
+</code></pre>
+<blockquote>
+<p>提交上传文件</p>
+</blockquote>
+<pre><code class="lang-bash">svn add &lt;文件路径&gt;
+
+svn commit -m <span class="hljs-string">"提交说明"</span> &lt;文件路径&gt;
+</code></pre>
+<p>如果要提交整个目录下的所有文件，可以将 <code>&lt;文件路径&gt;</code> 替换为目录的路径</p>
+<blockquote>
+<p>更新文件</p>
+</blockquote>
+<p>checkout只在第一次链接时使用一次，以后如果进行更新操作请使用update指令</p>
+<h1 id="系统级">2 系统级</h1>
+<blockquote>
+<p>版本信息</p>
+</blockquote>
+<pre><code class="lang-cmd">[root@iZ2zeh6nc313zs4azjijjnZ ~]# uname -r
+<span class="hljs-number">3</span>.<span class="hljs-number">10</span>.<span class="hljs-number">0</span>-<span class="hljs-number">1062</span>.<span class="hljs-number">12</span>.<span class="hljs-number">1</span>.el7.x86_64
+[root@iZ2zeh6nc313zs4azjijjnZ ~]# lsb_release -a
+LSB Version:    :core-<span class="hljs-number">4</span>.<span class="hljs-number">1</span>-amd64:core-<span class="hljs-number">4</span>.<span class="hljs-number">1</span>-noarch
+Distributor ID: CentOS
+<span class="hljs-function">Description:    <span class="hljs-title">CentOS</span> <span class="hljs-title">Linux</span> <span class="hljs-title">release</span> 7.7.1908 (<span class="hljs-title">Core</span>)
+<span class="hljs-title">Release</span>:        7.7.1908
+<span class="hljs-title">Codename</span>:       <span class="hljs-title">Core</span>
+</span></code></pre>
+<blockquote>
+<p>软链接</p>
+</blockquote>
+<p><code>ln</code>是linux中又一个非常重要命令，它的功能是为某一个文件在另外一个位置建立一个同步的链接</p>
+<p>当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件</p>
+<p>我们只要在某个固定的目录，放上该文件，然后在 其它的目录下用ln命令链接(link)它就可以，不必重复的占用磁盘空间</p>
+<p>这个命令最常用的参数是-s,具体用法是：ln -s 源文件 目标文件</p>
+<ul>
+<li><p>报错例子</p>
+<pre><code class="lang-sh">ImportError: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.21<span class="hljs-string">' not found (required by /home/anaconda/install/envs/stk37/lib/python3.7/site-packages/pandas/_libs/window/aggregations.cpython-37m-x86_64-linux-gnu.so)
+</span></code></pre>
+</li>
+<li><p>解决方案</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># 查找lib库</span>
+sudo find / -name <span class="hljs-string">"libstdc++.so.6*"</span>
+<span class="hljs-comment"># 从上述列表里找一个路径，查看是否存在我们需要的'GLIBCXX_3.4.21'</span>
+strings /home/anaconda/lib/x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so.6 |grep GLIBCXX_3.4.21
+<span class="hljs-comment"># 如果存在的话，建立软链接到我们需要的地方，这里例子里是/lib64/libstdc++.so.6</span>
+ln <span class="hljs-_">-s</span> /home/anaconda/lib/x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so.6 /lib64/libstdc++.so.6
+<span class="hljs-comment"># 注意如果/lib64/libstdc++.so.6 已经存在，此时上述命令会报错，需要先备份后删除，再执行ln，(但是里面没有我们需要的'GLIBCXX_3.4.21'，可以用strings查看)</span>
+cp /lib64/libstdc++.so.6 /lib64/libstdc++.so.6_bak
+rm /lib64/libstdc++.so.6
+ln <span class="hljs-_">-s</span> /home/anaconda/lib/x86_64-conda_cos6-linux-gnu/sysroot/lib/libstdc++.so.6 /lib64/libstdc++.so.6
+<span class="hljs-comment"># 至此完成软链接配置</span>
+</code></pre>
+</li>
+</ul>
+<h1 id="代理配置">3 代理配置</h1>
+<p>修改配置文件<code>/etc/profile</code>，即可配置centos通过代理进行上网</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># 编辑配置文件</span>
+vi /etc/profile
+<span class="hljs-comment"># 添加代理服务器ip地址和端口号</span>
+<span class="hljs-built_in">export</span> http_proxy=http://192.168.xx.xx:port
+<span class="hljs-built_in">export</span> https_proxy=http://192.168.xx.xx:port
+<span class="hljs-built_in">export</span> ftp_proxy=<span class="hljs-variable">$http_proxy</span>
+
+<span class="hljs-comment"># 使配置文件生效</span>
+<span class="hljs-built_in">source</span> /etc/profile
+</code></pre>
+<p>在<code>/etc/yum.conf</code>后面添加以下内容</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># 编辑配置文件</span>
+vi /etc/yum.conf
+proxy=http://127.0.0.1:8080
+
+<span class="hljs-comment"># 使配置文件生效</span>
+<span class="hljs-built_in">source</span> /etc/yum.conf
+</code></pre>
+<p>编辑配置文件<code>/etc/wgetrc</code>添加下面两行</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># 编辑配置文件</span>
+vi /etc/wgetrc
+http_proxy=http://127.0.0.1:8080
+https_proxy=http://127.0.0.1:8080
+
+<span class="hljs-comment"># 使配置文件生效</span>
+<span class="hljs-built_in">source</span> /etc/wgetrc
+</code></pre>
+<h1 id="包管理">4 包管理</h1>
+<blockquote>
+<p>安装 RPM 包</p>
+</blockquote>
+<pre><code class="lang-sh">sudo rpm -ivh --prefix=&lt;installation_path&gt; &lt;package_name&gt;
+</code></pre>
+<p><code>--prefix</code>为可选项，用于指定安装路径。如不设置，系统会将安装到默认路径</p>
+<p></p><footer class="page-footer"><span class="copyright">Copyright © narutohyc.com 2021 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
+2023-08-14 07:23:22
+</span></footer><hr/><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'evyLlP61gQN3G3OM2GQq1rzH-gzGzoHsz',appKey: 'utUrzoiqNaDEGlgr09JL1pXB',placeholder: '欢迎留下评论交流~',avatar: 'wavatar',meta: undefined,pageSize: 15,lang: 'zh-CN',recordIP: false})</script><p></p>
+</section>
+</div>
+<div class="search-results">
+<div class="has-results">
+<h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
+<ul class="search-results-list"></ul>
+</div>
+<div class="no-results">
+<h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Previous page: Kafka基本安装和使用" class="navigation navigation-prev" href="8.Kafka基本安装和使用.html">
+<i class="fa fa-angle-left"></i>
+</a>
+<a aria-label="Next page: alicloud_deployment" class="navigation navigation-next" href="1.alicloud_deployment.html">
+<i class="fa fa-angle-right"></i>
+</a>
+<script src="https://cdn.jsdelivr.net/gh/zztongtong/CDN/js/live2d.min.js"></script><div style="position:absolute; bottom:0; left:0; width:200;"><canvas height="350" id="model_1" width="200"></canvas></div></div>
+<script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux常用命令","date":"2022/9/12 10:02:25","top_img":"https://pic.hycbook.com/i//hexo/post_imgs/蕾姆2.webp","cover":"https://pic.hycbook.com/i//hexo/post_cover/蕾姆2.webp","categories":["common"],"tags":["linux指令"],"abbrlink":48230,"level":"1.3","depth":1,"next":{"title":"alicloud_deployment","level":"1.4","depth":1,"path":"chapters/1.alicloud_deployment.md","ref":"chapters/1.alicloud_deployment.md","articles":[]},"previous":{"title":"Kafka基本安装和使用","level":"1.2","depth":1,"path":"chapters/8.Kafka基本安装和使用.md","ref":"chapters/8.Kafka基本安装和使用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","mathjax","mermaid-gb3","tbfed-pagefooter","code","search-plus","-lunr","-search","lightbox","theme-comscore","valine","pageview-count","favicon-absolute","copyright-v"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © narutohyc.com 2021","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/narutohyc"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://s2.loli.net/2022/03/23/dEYjkaSGXwe7rnu.png","alipayText":"alipay打赏","button":"欢迎打赏","title":"","wechat":"https://s2.loli.net/2022/03/23/WDiTVSamQBJdEA4.png","wechatText":"wechat打赏"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"./chapters/res/other/favicon.ico","appleTouchIconPrecomposedMore":{},"favicon":"./chapters/res/other/favicon.ico"},"copyright-v":{"copyProtect":true,"enableFooter":false,"site":"https://hycbook.github.io/bk_python/","author":"narutohyc","website":"python元知识驿站","image":"https://s2.loli.net/2022/03/24/pbMd1BCgUNzi7mG.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"narutohyc","repo":"bk_python","type":"star","size":"small","count":true}]},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"valine":{"avatar":"wavatar","lang":"zh-CN","pageSize":15,"placeholder":"欢迎留下评论交流~","recordIP":false,"appId":"evyLlP61gQN3G3OM2GQq1rzH-gzGzoHsz","appKey":"utUrzoiqNaDEGlgr09JL1pXB"},"search-plus":{}},"theme":"default","author":"narutohyc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python相关学习记录","language":"zh-hans","links":{"sidebar":{"书籍主页":"https://hycbook.github.io/bk_index/"}},"gitbook":"*","description":"记录 Python 的学习和一些技巧的使用"},"file":{"path":"chapters/3.Linux常用命令.md","mtime":"2023-08-14T07:23:22.581Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-14T07:24:23.700Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+<canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script></div>
+<script src="../gitbook/gitbook.js"></script>
+<script src="../gitbook/theme.js"></script>
+<script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+<script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+<script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+<script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+<script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+<script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+<script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-copyright-v/plugin.js"></script>
+<script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+<script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+</body>
+</html>
