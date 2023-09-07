@@ -51,7 +51,8 @@ jobs:
           git clone https://github.com/narutohyc/node_modules_mathjax.git
           cp -r ./node_modules_mathjax/node_modules .
           # 手动安装lightbox
-          npm install  gitbook-plugin-lightbox 
+          npm install  gitbook-plugin-lightbox
+          npm install -g gitbook-cli
           gitbook install
 
 
