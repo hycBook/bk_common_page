@@ -35,11 +35,18 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('book.json') }}
     
+      - name: Cache GitBook
+        uses: actions/cache@v2
+        with:
+          path: ~/.gitbook # 缓存路径
+          key: ${{ runner.os }}-gitbook-${{ hashFiles('**/book.json') }}
+          restore-keys: |
+            ${{ runner.os }}-gitbook-
+          
       - name: Install dependencies
         if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }} # 如果缓存不存在，则执行安装
         run: |
           echo 开始拉取nodejs插件
-          rm -rf node_modules_mathjax
           git clone https://github.com/narutohyc/node_modules_mathjax.git
           cp -r ./node_modules_mathjax/node_modules .
           npm install -g gitbook-cli
