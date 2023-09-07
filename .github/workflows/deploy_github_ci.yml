@@ -54,6 +54,7 @@ jobs:
           npm install  gitbook-plugin-lightbox 
           gitbook install
 
+
       # configue gitbook
       - name: configue gitbook
         run: |
