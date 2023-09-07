@@ -40,7 +40,6 @@ jobs:
         run: |
           echo 开始拉取nodejs插件
           git clone https://github.com/narutohyc/node_modules_mathjax.git
-
       # configue gitbook
       - name: configue gitbook
         run: |
