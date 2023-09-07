@@ -12,7 +12,8 @@ on:
 jobs:
   # This workflow contains a single job called "build_env_hyc"
   build_env_hyc:
-    runs-on: ubuntu-latest # The type of runner that the job will run on
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -24,29 +25,13 @@ jobs:
         uses: actions/setup-node@v1
         with: 
           node-version: '12.16.1'
-
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('book.json') }}
-    
-      - name: Install dependencies
-        if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }} # 如果缓存不存在，则执行安装
+      
+      # configue gitbook
+      - name: configue gitbook
         run: |
           echo 开始拉取nodejs插件
           git clone https://github.com/narutohyc/node_modules_mathjax.git
           cp -r ./node_modules_mathjax/node_modules .
-          # 手动安装lightbox
-          npm install  gitbook-plugin-lightbox 
-
-      # configue gitbook
-      - name: configue gitbook
-        run: |
           npm install -g gitbook-cli
           # 手动安装lightbox
           npm install  gitbook-plugin-lightbox 
