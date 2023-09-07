@@ -25,22 +25,22 @@ jobs:
         with: 
           node-version: '12.16.1'
 
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('book.json') }}
+      # - name: Cache node modules
+      #   id: cache-npm
+      #   uses: actions/cache@v3
+      #   env:
+      #     cache-name: cache-node-modules
+      #   with:
+      #     # npm cache files are stored in `~/.npm` on Linux/macOS
+      #     path: node_modules
+      #     key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('book.json') }}
     
       - name: Install dependencies
         if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }} # 如果缓存不存在，则执行安装
         run: |
           echo 开始拉取nodejs插件
-            git clone https://github.com/narutohyc/node_modules_mathjax.git
-            cp -r ./node_modules_mathjax/node_modules .
+          git clone https://github.com/narutohyc/node_modules_mathjax.git
+          cp -r ./node_modules_mathjax/node_modules .
 
       # configue gitbook
       - name: configue gitbook
@@ -50,7 +50,6 @@ jobs:
           npm install  gitbook-plugin-lightbox 
           gitbook install
           # npm install -g gitbook-summary
-
       # - name: export pdf ebook
       #   run: |
       #     # 安装calibre，生成电子书
@@ -93,8 +92,6 @@ jobs:
           cat chapters/res/patch/gitbook-plugin-fontsettings/website.css >> _book/gitbook/gitbook-plugin-fontsettings/website.css
           cp chapters/res/patch/gitbook-plugin-theme-comscore/test.css _book/gitbook/gitbook-plugin-theme-comscore/test.css
           echo 更新自定义主题完成
-
-
       - name: Deploy #步骤4：把编译好的静态目录上传到gh-pages分支上
         uses: JamesIves/github-pages-deploy-action@3.1.5 #这里调用第三方依赖，用于上传代码到指定分支上
         with:
@@ -111,7 +108,6 @@ jobs:
           prerelease: false
           files: |
             _ebook/*
-
       # - name: Sync Github Repos To Gitee  # 名字随便起
       #   uses: Yikun/hub-mirror-action@master  # 使用Yikun/hub-mirror-action
       #   with:
