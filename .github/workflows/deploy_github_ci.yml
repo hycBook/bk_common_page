@@ -49,6 +49,7 @@ jobs:
           npm install  gitbook-plugin-lightbox 
           gitbook install
           # npm install -g gitbook-summary
+      
       # - name: export pdf ebook
       #   run: |
       #     # 安装calibre，生成电子书
