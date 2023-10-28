@@ -33,24 +33,24 @@ var counter_style = '109'
 var id_map = new Map();
 // https://common.hycbook.com/chapters/
 id_map.set("", "hmxncdcf");
-// https://common.hycbook.com/chapters/8.Kafka基本安装和使用.html
-id_map.set("8.Kafka基本安装和使用.html", "hmuxncdcp");
-// https://common.hycbook.com/chapters/6.docker使用.html
-id_map.set("6.docker使用.html", "hvmxncdcc");
-// https://common.hycbook.com/chapters/2.reinstall_the_system.html
-id_map.set("2.reinstall_the_system.html", "hxncdcq");
-// https://common.hycbook.com/chapters/9.elementary_os记录.html
-id_map.set("9.elementary_os记录.html", "hexncdcn");
-// https://common.hycbook.com/chapters/1.alicloud_deployment.html
-id_map.set("1.alicloud_deployment.html", "hxncdcq");
 // https://common.hycbook.com/chapters/7.md数学公式和emoji表情.html
 id_map.set("7.md数学公式和emoji表情.html", "hexncdcn");
 // https://common.hycbook.com/chapters/4.github协作.html
 id_map.set("4.github协作.html", "hmuxncdcp");
-// https://common.hycbook.com/chapters/3.Linux常用命令.html
-id_map.set("3.Linux常用命令.html", "hvxncdco");
+// https://common.hycbook.com/chapters/8.Kafka基本安装和使用.html
+id_map.set("8.Kafka基本安装和使用.html", "hmuxncdcp");
 // https://common.hycbook.com/chapters/5.gitbook博客搭建.html
 id_map.set("5.gitbook博客搭建.html", "hvxncdco");
+// https://common.hycbook.com/chapters/9.elementary_os记录.html
+id_map.set("9.elementary_os记录.html", "hexncdcn");
+// https://common.hycbook.com/chapters/3.Linux常用命令.html
+id_map.set("3.Linux常用命令.html", "hvxncdco");
+// https://common.hycbook.com/chapters/2.reinstall_the_system.html
+id_map.set("2.reinstall_the_system.html", "hxncdcq");
+// https://common.hycbook.com/chapters/1.alicloud_deployment.html
+id_map.set("1.alicloud_deployment.html", "hxncdcq");
+// https://common.hycbook.com/chapters/6.docker使用.html
+id_map.set("6.docker使用.html", "hvmxncdcc");
 // ===========================================
 
 
